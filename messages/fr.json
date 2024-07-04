@@ -1,185 +1,185 @@
 {
   "Common": {
-    "loading": "Chargement..."
+    "loading": "chargement..."
   },
   "Navigation": {
-    "title": "Répertoire des outils AI de Tap4",
+    "title": "Répertoire des outils Nav ai",
     "discover": "Découvrir l'IA",
     "submit": "Soumettre",
-    "newtools": "Nouveaux outils",
-    "startup": "Startups",
-    "menu": "Menu"
+    "newtools": "Nouveaux Outils",
+    "startup": "Startup",
+    "menu": "menu"
   },
   "Footer": {
-    "title": "Répertoire des outils AI de Tap4",
-    "subTitle": "Découvrez les meilleurs outils AI de 2024 dans le Répertoire des outils AI de Tap4 !",
-    "support": "Soutien",
-    "tap4": "Tap4 AI",
-    "tattoo": "Générateur de Tatouages AI",
+    "title": "Découvrez les outils IA sur Navai.me",
+    "subTitle": "Trouvez des guides d'experts sur les meilleurs outils IA pour la productivité et le succès sur Navai.me.",
+    "support": "Support",
+    "tap4": "Nav ai",
+    "tattoo": "Outils IA",
     "privacy": "Politique de confidentialité",
-    "termsConditions": "Termes et conditions",
+    "termsConditions": "Conditions générales",
     "contactUs": "Contactez-nous"
   },
   "Faq": {
-    "title": "FAQ",
+    "title": "Questions fréquemment posées sur les outils IA",
     "1": {
-      "question": "Qu'est-ce que le Répertoire des outils AI de Tap4 ?",
-      "answer": "Le Répertoire des outils AI de Tap4 - tap4.ai est en train de construire un répertoire d'outils AI pour vous aider à obtenir vos outils AI préférés. Vous pouvez y trouver des outils d'écriture AI, des outils de marketing AI, des outils de réécriture AI, des outils SEO AI, des outils d'apprentissage AI, des outils de génération AI, des outils de recherche AI, des outils artistiques AI, des outils de musique AI, des outils vidéo AI, des outils de codage AI, des outils photo AI, etc."
+      "question": "Qu'est-ce que le répertoire des outils Nav ai?",
+      "answer": "Le répertoire des outils Nav AI sur navai.me est une section dédiée à aider les utilisateurs à découvrir et à utiliser divers outils IA pour améliorer leur développement professionnel. Grâce au répertoire des outils Nav AI, vous pouvez trouver une sélection triée des meilleurs outils IA visant à augmenter la productivité, optimiser la gestion de projet et promouvoir le succès professionnel. Que vous cherchiez à améliorer vos compétences en écriture, augmenter l'efficacité de la gestion de projet ou rester à jour avec les dernières tendances technologiques de l'IA, navai.me offre des guides d'experts et des évaluations complètes des outils pour vous aider à atteindre vos objectifs professionnels. Rejoignez navai.me, explorez ces outils IA et élevez votre carrière à de nouveaux sommets."
     },
     "2": {
-      "question": "Comment trouver votre outil AI dans le Répertoire des outils AI de Tap4 ?",
-      "answer-1": "1. Ouvrez tap4.ai.",
-      "answer-2": "2. Explorez les outils AI dans le Répertoire des outils AI de Tap4.",
-      "answer-3": "3. Cliquez sur l'outil AI dont vous avez besoin pour obtenir les détails et y accéder."
+      "question": "Comment trouver vos outils IA dans le répertoire des outils Nav ai?",
+      "answer-1": "1. Visitez navai.me: Commencez par naviguer sur notre site web, navai.me, où vous trouverez le répertoire des outils Nav AI bien en évidence.",
+      "answer-2": "2. Utilisez la fonction de recherche: Utilisez la barre de recherche en haut de la page pour saisir des mots-clés ou des catégories spécifiques liés aux outils IA que vous recherchez. Cela vous aidera à localiser rapidement les outils pertinents.",
+      "answer-3": "3. Lisez les guides: Pour chaque outil IA listé, navai.me offre des évaluations détaillées et des guides d'experts. Ces ressources vous aideront à comprendre les fonctionnalités, les avantages et les meilleurs cas d'utilisation de chaque outil, vous assurant ainsi de choisir celui qui convient le mieux à vos besoins professionnels."
     },
     "3": {
-      "question": "Quelles sont les principales caractéristiques du Répertoire des outils AI de Tap4 ?",
-      "answer-1": "1. Répertoire d'outils AI gratuit : trouvez gratuitement vos outils AI préférés ici.",
-      "answer-2": "2. Liste des startups : liste gratuite pour les développeurs d'outils AI."
+      "question": "Quelles sont les principales fonctionnalités du répertoire des outils Nav ai?",
+      "answer-1": "1. Sélection triée: Une collection triée sur le volet des meilleurs outils IA adaptés à divers besoins professionnels, y compris la productivité, la gestion de projet et le développement des compétences.",
+      "answer-2": "2. Navigation conviviale: Fonctions de recherche et de navigation par catégorie faciles à utiliser pour trouver rapidement des outils IA pertinents."
     },
     "4": {
-      "question": "La soumission d'outils AI au Répertoire des outils AI de Tap4 est-elle gratuite ?",
-      "answer": "Oui, actuellement c'est gratuit. Mais vous devez partager le lien retour du Répertoire des outils AI de Tap4 !"
+      "question": "Est-ce gratuit de soumettre des outils IA au répertoire des outils Nav ai?",
+      "answer": "Oui, il est gratuit de soumettre des outils IA au répertoire des outils Nav AI sur navai.me. Visitez simplement le site web et suivez les directives de soumission pour répertorier vos outils IA."
     },
     "5": {
-      "question": "Quelles catégories d'outils AI sont prises en charge par le Répertoire des outils AI de Tap4 ?",
-      "answer": "Nous allons prendre en charge tous les types d'outils AI à l'avenir. Veuillez patienter quelques jours."
+      "question": "Quelles sont les catégories d'outils IA prises en charge par le répertoire des outils Nav ai?",
+      "answer": "Le répertoire des outils Nav AI sur navai.me prend en charge une variété de catégories, y compris la productivité, la gestion de projet, l'amélioration de l'écriture, le développement professionnel et plus encore. Visitez navai.me pour explorer la liste complète des catégories d'outils IA."
     },
     "6": {
-      "question": "Quelle est la fréquence de mise à jour des outils AI dans le Répertoire des outils AI de Tap4 ?",
-      "answer": "La liste des outils AI sera mise à jour quotidiennement."
+      "question": "À quelle fréquence le répertoire des outils Nav ai est-il mis à jour?",
+      "answer": "Le répertoire des outils Nav AI sur navai.me est régulièrement mis à jour pour garantir que les outils IA les plus récents et les plus pertinents soient disponibles. Pour des fréquences de mise à jour spécifiques et les dernières ajouts, visitez navai.me."
     },
     "7": {
-      "question": "GPT-4o ou Sora AI sont-ils pris en charge ici ?",
-      "answer": "Vous pouvez obtenir des outils GPT-4o ou Sora AI ici. Il y a des vidéos d'introduction de GPT-4o et Sora, et vous pouvez accéder aux sites web des outils."
+      "question": "Le GPT-4 ou Sora AI sont-ils pris en charge ici?",
+      "answer": "Oui, le répertoire des outils Nav AI sur navai.me comprend le support pour une large gamme d'outils IA, y compris GPT-4 et Sora AI. Visitez navai.me pour explorer ces outils IA avancés et bien d'autres."
     },
     "8": {
       "question": "Dépannage",
-      "answer": "Si le contenu n'apparaît pas, essayez un autre navigateur et effacez le cache. Si le problème persiste, contactez-nous à : contact@6677.ai."
+      "answer": "Pour résoudre les problèmes avec les outils IA listés sur navai.me, visitez notre section de support pour des guides détaillés et des solutions. Trouvez des réponses aux problèmes courants et tirez le meilleur parti de vos outils IA sur navai.me."
     },
     "9": {
-      "question": "Comment le contenu du Répertoire des outils AI de Tap4 est-il généré ?",
-      "answer": "Le contenu descriptif des outils AI est généré par GPT-4o d'OpenAI."
+      "question": "Comment le contenu du répertoire des outils Nav ai est-il généré?",
+      "answer": "Le contenu du répertoire des outils Nav AI sur navai.me est généré par une combinaison d'évaluations d'experts, de soumissions d'utilisateurs et d'évaluations approfondies des derniers outils IA. Notre équipe s'assure que chaque outil est soigneusement évalué et catégorisé pour fournir les meilleures ressources à nos utilisateurs. Visitez navai.me pour plus de détails sur notre processus de génération de contenu."
     },
     "10": {
-      "question": "Quelles sont les autorisations d'utilisation des outils AI ?",
-      "answer": "Le Répertoire des outils AI de Tap4 est simplement un répertoire d'outils AI. Les autorisations d'utilisation des outils AI sont basées sur le site web de l'outil AI."
+      "question": "Quels sont les droits d'utilisation des outils IA?",
+      "answer": "Les droits d'utilisation des outils IA listés sur navai.me varient selon l'outil et le fournisseur. Chaque outil IA est accompagné de ses propres termes et conditions, qui peuvent inclure des accords de licence, des limitations d'utilisation et des droits de propriété intellectuelle. Pour des informations détaillées, veuillez consulter les termes spécifiques fournis par le développeur de chaque outil sur navai.me."
     },
     "11": {
-      "question": "L'interface Web du Répertoire des outils AI de Tap4 est-elle open source ?",
-      "answer": "Oui, nous ouvrirons l'interface Web du Répertoire des outils AI de Tap4 sur GitHub (https://github.com/6677-ai/tap4-ai-webui). Veuillez nous donner un étoile."
+      "question": "L'interface Web du répertoire des outils Nav ai est-elle open source?",
+      "answer": "L'interface Web du répertoire des outils Nav AI sur navai.me n'est pas open source. C'est une interface propriétaire conçue pour offrir aux utilisateurs la meilleure expérience dans l'exploration et l'utilisation des outils IA. Pour plus de détails, visitez navai.me."
     }
   },
   "FooterNavigation": {
     "privacyPolicy": {
-      "1-h1": "Politique de confidentialité du Répertoire des outils AI de Tap4",
-      "1-p": "Cette page est utilisée pour informer les visiteurs de mes politiques concernant la collecte, l'utilisation et la divulgation des informations personnelles si quelqu'un décide d'utiliser mon service. Si vous choisissez d'utiliser mon service, vous acceptez la collecte et l'utilisation des informations en relation avec cette politique. Les informations personnelles que je collecte sont utilisées pour fournir et améliorer le service. Je n'utiliserai ni ne partagerai vos informations avec personne, sauf comme décrit dans cette politique de confidentialité. Les termes utilisés dans cette politique de confidentialité ont les mêmes significations que dans nos Termes et Conditions.",
+      "1-h1": "Politique de confidentialité pour le répertoire des outils Nav ai",
+      "1-p": "Cette page est utilisée pour informer les visiteurs concernant nos politiques de collecte, d'utilisation et de divulgation des informations personnelles pour toute personne décidant d'utiliser notre Service. En choisissant d'utiliser notre Service, vous acceptez la collecte et l'utilisation d'informations conformément à cette politique. Les informations personnelles que nous collectons sont utilisées pour fournir et améliorer le Service. Nous n'utiliserons ni ne partagerons vos informations avec personne, sauf comme décrit dans cette Politique de confidentialité. Les termes utilisés dans cette Politique de confidentialité ont les mêmes significations que dans nos Conditions générales, qui sont accessibles sur le répertoire des outils Nav ai, sauf indication contraire dans cette Politique de confidentialité.",
       "2-h2": "1. Collecte et utilisation des informations",
-      "2-p": "Pour une meilleure expérience, lors de l'utilisation de notre service, je peux vous demander de nous fournir certaines informations personnellement identifiables. Les informations que je demande seront conservées sur votre appareil et ne seront en aucun cas collectées par moi. L'application utilise des services tiers qui peuvent collecter des informations utilisées pour vous identifier.",
+      "2-p": "Pour une meilleure expérience, lors de l'utilisation de notre Service, nous pouvons vous demander de nous fournir certaines informations personnellement identifiables, y compris mais non limitées à votre nom, numéro de téléphone et adresse postale. Les informations que nous collectons seront utilisées pour vous contacter ou vous identifier. Nous ne collectons pas d'informations personnelles auprès d'enfants de moins de 13 ans. Si nous prenons conscience qu'un enfant de moins de 13 ans nous a fourni des informations personnelles, nous les supprimerons immédiatement de nos fichiers.",
       "3-h2": "2. Données de journal",
-      "3-p": "Je tiens à vous informer que chaque fois que vous utilisez mon service, en cas d'erreur dans l'application, je collecte des données et des informations sur votre téléphone via des produits tiers appelés données de journal. Ces données de journal peuvent inclure des informations telles que l'adresse IP de votre appareil, le nom de l'appareil, la version du système d'exploitation, la configuration de l'application lors de l'utilisation de mon service, l'heure et la date de votre utilisation du service, et d'autres statistiques.",
+      "3-p": "Nous voulons vous informer que chaque fois que vous utilisez notre Service, en cas d'erreur dans l'application, nous collectons des données et des informations (par le biais de produits tiers) sur votre téléphone appelées Données de journal. Ces Données de journal peuvent inclure des informations telles que l'adresse de protocole Internet (\"IP\") de votre appareil, le nom de l'appareil, la version du système d'exploitation, la configuration de l'application lors de l'utilisation de notre Service, l'heure et la date de votre utilisation du Service et d'autres statistiques. Ces données sont utilisées pour améliorer le Service et diagnostiquer les problèmes.",
       "4-h2": "3. Cookies",
-      "4-p": "Les cookies sont des fichiers contenant une petite quantité de données qui sont couramment utilisés comme identifiants uniques anonymes. Ces données sont envoyées à votre navigateur à partir des sites web que vous visitez et sont stockées sur la mémoire interne de votre appareil. Ce service n'utilise pas explicitement ces \"cookies\". Cependant, l'application peut utiliser des codes et des bibliothèques tiers qui utilisent des \"cookies\" pour collecter des informations et améliorer leurs services. Vous avez la possibilité d'accepter ou de refuser ces cookies et de savoir quand un cookie est envoyé à votre appareil. Si vous choisissez de refuser nos cookies, vous ne pourrez peut-être pas utiliser certaines parties de ce service.",
-      "5-h2": "4. Prestataires de services",
-      "5-p-1": "Je peux employer des sociétés tierces et des individus pour les raisons suivantes :",
-      "5-li-1": "Pour faciliter notre service ;",
-      "5-li-2": "Pour fournir le service en notre nom ;",
-      "5-li-3": "Pour exécuter des services liés au service ;",
-      "5-li-4": "Pour nous aider à analyser l'utilisation de notre service ;",
-      "5-p-2": "Je veux informer les utilisateurs de ce service que ces tiers ont accès à vos informations personnelles. La raison est d'exécuter les tâches qui leur sont assignées en notre nom. Cependant, ils sont obligés de ne pas divulguer ou utiliser les informations à d'autres fins.",
+      "4-p": "Les cookies sont des fichiers contenant une petite quantité de données qui sont couramment utilisés comme identifiants uniques anonymes. Ceux-ci sont envoyés à votre navigateur à partir des sites Web que vous visitez et sont stockés dans la mémoire interne de votre appareil. Notre Service n'utilise pas explicitement ces 'cookies'. Cependant, l'application peut utiliser du code et des bibliothèques tiers qui utilisent des 'cookies' pour collecter des informations et améliorer leurs services. Vous avez la possibilité d'accepter ou de refuser ces cookies et de savoir quand un cookie est envoyé à votre appareil. Si vous choisissez de refuser nos cookies, il se peut que vous ne puissiez pas utiliser certaines parties de notre Service.",
+      "5-h2": "4. Fournisseurs de services",
+      "5-p-1": "Nous pouvons employer des sociétés et des individus tiers pour les raisons suivantes :",
+      "5-li-1": "Pour faciliter notre Service ;",
+      "5-li-2": "Pour fournir le Service en notre nom ;",
+      "5-li-3": "Pour effectuer des services liés au Service ;",
+      "5-li-4": "Pour nous aider à analyser comment notre Service est utilisé ;",
+      "5-p-2": "Nous voulons informer les utilisateurs de ce Service que ces tiers ont accès à vos informations personnelles. La raison est d'exécuter les tâches qui leur sont assignées en notre nom. Cependant, ils sont obligés de ne pas divulguer ou utiliser les informations à d'autres fins.",
       "6-h2": "5. Sécurité",
-      "6-p": "Je valorise votre confiance en nous fournissant vos informations personnelles, nous nous efforçons donc d'utiliser des moyens commercialement acceptables pour les protéger. Mais rappelez-vous qu'aucune méthode de transmission sur Internet, ou méthode de stockage électronique n'est 100% sécurisée et fiable, et je ne peux garantir leur sécurité absolue.",
+      "6-p": "Nous apprécions votre confiance en nous fournissant vos informations personnelles, nous nous efforçons donc d'utiliser des moyens commercialement acceptables de les protéger. Mais rappelez-vous qu'aucune méthode de transmission sur Internet ou méthode de stockage électronique n'est sûre et fiable à 100%, et nous ne pouvons garantir leur sécurité absolue.",
       "7-h2": "6. Liens vers d'autres sites",
-      "7-p": "Ce service peut contenir des liens vers d'autres sites. Si vous cliquez sur un lien tiers, vous serez dirigé vers ce site. Notez que ces sites externes ne sont pas exploités par moi. Par conséquent, je vous conseille fortement de consulter la politique de confidentialité de ces sites. Je n'ai aucun contrôle sur et n'assume aucune responsabilité quant au contenu, aux politiques de confidentialité ou aux pratiques de tout site ou service tiers.",
-      "8-h2": "7. Modifications de cette politique de confidentialité",
-      "8-p": "Je peux mettre à jour notre politique de confidentialité de temps en temps. Ainsi, vous êtes conseillé de consulter cette page périodiquement pour tout changement. Je vous notifierai de tout changement en publiant la nouvelle politique de confidentialité sur cette page. Ces changements sont effectifs immédiatement après leur publication sur cette page."
+      "7-p": "Notre Service peut contenir des liens vers d'autres sites. Si vous cliquez sur un lien tiers, vous serez dirigé vers ce site. Notez que ces sites externes ne sont pas exploités par nous. Par conséquent, nous vous conseillons vivement de consulter la Politique de confidentialité de ces sites Web. Nous n'avons aucun contrôle sur et n'assumons aucune responsabilité quant au contenu, aux politiques de confidentialité ou aux pratiques des sites ou services tiers.",
+      "8-h2": "7. Modifications de cette Politique de confidentialité",
+      "8-p": "Nous pouvons mettre à jour notre Politique de confidentialité de temps en temps. Ainsi, nous vous conseillons de consulter cette page périodiquement pour tout changement. Nous vous informerons de tout changement en publiant la nouvelle Politique de confidentialité sur cette page. Ces modifications entrent en vigueur immédiatement après leur publication sur cette page."
     },
     "termsConditions": {
-      "1-h1": "Termes et Conditions du Répertoire des outils AI de Tap4",
-      "1-p": "Bienvenue sur le Répertoire des outils AI de Tap4 ! Notre site web situé à l'adresse https://tap4.ai (le \"Site\") est dédié à vous fournir la capacité de créer des images personnalisées. En accédant ou en utilisant notre site web, vous acceptez d'être lié par ces termes de service (les \"Termes\"). Si vous n'êtes pas d'accord avec l'un de ces termes, il vous est interdit d'utiliser le site.",
+      "1-h1": "Conditions de service pour le répertoire Nav ai",
+      "1-p": "Bienvenue au répertoire Nav ai ! Notre site Web, situé à l'adresse https://navai.me (\"Site Web\"), est dédié à vous offrir la possibilité de créer des images personnalisées. En accédant à ou en utilisant notre Site Web, vous acceptez d'être lié par ces Conditions de service (\"Conditions\"). Si vous n'acceptez pas une partie des conditions, vous n'êtes pas autorisé à utiliser le Site Web.",
       "2-h2": "1. Licence d'utilisation",
-      "2-p": "Vous êtes accordé une licence limitée, non exclusive et non transférable pour utiliser le site et ses services pour des usages personnels et non commerciaux. Cette licence n'inclut pas le droit de copier, modifier ou distribuer le contenu du site ou de l'utiliser à des fins commerciales sans notre consentement écrit préalable.",
+      "2-p": "Il vous est accordé une licence limitée, non exclusive et non transférable pour utiliser le Site Web et ses services à des fins personnelles et non commerciales. Cette licence n'inclut aucun droit de copier, modifier ou distribuer le contenu du Site Web ou de l'utiliser à des fins commerciales sans notre consentement écrit préalable.",
       "3-h2": "2. Propriété",
-      "3-p": "La propriété des images générées à partir de texte sur le site appartient à la personne qui a créé l'image. Tap4.ai ne revendique pas la propriété des images créées par les utilisateurs.",
+      "3-p": "La propriété des images générées à partir de texte sur le Site Web appartient à la personne qui a créé l'image. Navai.me ne revendique aucun droit de propriété sur les images créées par les utilisateurs.",
       "4-h2": "3. Collecte de données des utilisateurs",
-      "4-p": "Nous recueillons des données personnelles (nom, email et informations de paiement) et des données non personnelles (cookies web) pour améliorer nos services. L'utilisation de ces données est soumise à notre politique de confidentialité, disponible à ",
-      "terms-of-service": "Termes de service",
+      "4-p": "Nous collectons des données personnelles (nom, e-mail et informations de paiement) et des données non personnelles (cookies web) pour améliorer nos services. L'utilisation de ces données est régie par notre Politique de confidentialité, qui peut être consultée à",
+      "terms-of-service": "conditions de service",
       "5-h2": "4. Droit applicable",
-      "5-p": "Ces termes sont régis et interprétés conformément aux lois des États-Unis, sans égard à ses dispositions en matière de conflit de lois.",
-      "6-h2": "5. Modifications des termes",
-      "6-p": "Tap4 AI Directory se réserve le droit, à sa seule discrétion, de modifier ou de remplacer ces termes à tout moment. Nous vous informerons par email de tout changement. Votre utilisation continue du site après ces changements constitue votre acceptation des nouveaux termes.",
+      "5-p": "Ces Conditions sont régies et interprétées conformément aux lois des États-Unis d'Amérique, sans égard à ses dispositions en matière de conflits de lois.",
+      "6-h2": "5. Modifications des conditions",
+      "6-p": "Le répertoire Nav ai se réserve le droit, à notre seule discrétion, de modifier ou de remplacer ces Conditions à tout moment. Nous informerons les utilisateurs de tout changement par e-mail. Votre utilisation continue du Site Web après toute modification de ces Conditions constituera votre acceptation de ces modifications.",
       "7-h2": "6. Informations de contact",
-      "7-p": "Si vous avez des questions sur ces termes, veuillez nous contacter : contact@6677.ai.",
-      "last-p": "En utilisant le Répertoire des outils AI de Tap4, vous acceptez ces termes de service."
+      "7-p": "Si vous avez des questions concernant ces Conditions, veuillez nous contacter à contact@6677.ai.",
+      "last-p": "En utilisant le répertoire Nav ai, vous acceptez ces Conditions de service."
     }
   },
   "NotFound": {
     "title": "404 Non Trouvé",
-    "goHome": "Retour à l'accueil"
+    "goHome": "retour à l'accueil"
   },
   "Home": {
-    "title": "Tap4 AI - Découvrez les meilleurs outils d'IA 2024",
-    "subTitle": "Obtenez vos outils IA préférés dans l'annuaire des outils Tap4 AI. Les listes d'outils IA sont mises à jour quotidiennement par GPT-4o. C'est gratuit de soumettre ici pour améliorer votre SEO maintenant.",
+    "title": "Découvrez les outils IA sur Navai.me",
+    "subTitle": "Trouvez des guides d'experts sur les meilleurs outils IA pour la productivité et le succès sur Navai.me.",
     "ai-navigate": "Liste des outils IA",
-    "exploreMore": "Obtenez plus d'outils IA",
-    "checkDetail": "Voir le détail",
+    "exploreMore": "Obtenir plus d'outils IA",
+    "checkDetail": "Voir les détails",
     "search": "Recherche",
-    "result": "Résultat de recherche",
+    "result": "Résultat de la recherche",
     "empty": "Aucune donnée disponible"
   },
   "Category": {
-    "home": "Accueil",
+    "home": "accueil",
     "empty": "Aucune donnée disponible"
   },
   "Submit": {
-    "title": "Soumettez votre outil AI",
-    "subTitle": "Soumettez votre outil AI et obtenez du trafic du Répertoire des outils AI de Tap4",
-    "website": "Nom du site",
-    "url": "URL du site",
+    "title": "Soumettez votre outil IA",
+    "subTitle": "Soumettez votre outil IA et obtenez du trafic depuis le répertoire Nav ai",
+    "website": "Nom du site Web",
+    "url": "URL du site Web",
     "submit": "Soumettre",
     "add": "Ajouter",
-    "text": "à la page d'accueil de votre site, et vous pouvez soumettre votre site gratuitement avec succès !",
+    "text": "à la page d'accueil de votre site Web, puis vous pouvez soumettre votre site Web gratuitement avec succès!",
     "networkError": "Erreur réseau",
     "success": "succès"
   },
   "Startup": {
     "title": "Lancez votre startup",
-    "subTitle": "La liste ultime pour lancer et promouvoir le site web de votre startup. Pour ajouter à la liste ou aider à soumettre votre produit à une liste gratuite, veuillez envoyer un email à : contact@tap4.ai.",
-    "updateTime": "Organisé et mis à jour quotidiennement. Dernière mise à jour :",
+    "subTitle": "La liste ultime des sites Web pour lancer et promouvoir votre startup en ligne. Pour ajouter à la liste ou aider à soumettre votre produit à la liste gratuite, envoyez-nous un e-mail à erick.mshard@gmail.com.",
+    "updateTime": "Sélectionné et mis à jour quotidiennement. Dernière mise à jour :",
     "table": {
       "da": "DA",
-      "website": "Site web",
-      "tags": "Tags",
+      "website": "Site Web",
+      "tags": "Étiquettes",
       "price": "Prix",
       "submission": "Soumission"
     },
     "detail": {
-      "visitWebsite": "Visiter le site",
+      "visitWebsite": "Visiter le site Web",
       "introduction": "Introduction"
     }
   },
   "Explore": {
-    "title": "Découvrez les meilleurs outils AI de 2024",
-    "subTitle": "Trouvez vos outils AI préférés dans le Répertoire des outils AI de Tap4. La liste des outils AI est mise à jour quotidiennement par GPT-4o."
+    "title": "Découvrez les meilleurs outils IA de 2024",
+    "subTitle": "Obtenez vos outils IA préférés dans le répertoire des outils Nav ai. La liste des outils IA est mise à jour quotidiennement par GPT-4o."
   },
   "Metadata": {
     "home": {
-      "title": "Obtenez vos meilleurs outils AI | Répertoire des outils AI de Tap4",
-      "description": "Le Répertoire des outils AI de Tap4 est un outil qui propose un répertoire gratuit d'outils AI. Obtenez vos outils AI préférés avec le Répertoire des outils AI de Tap4, qui vise à collecter tous les outils AI et à fournir le meilleur service aux utilisateurs.",
-      "keywords": "Répertoire des outils AI de Tap4"
+      "title": "Nav ai : Votre guide des meilleurs outils IA pour la carrière et plus encore",
+      "description": "Découvrez les meilleurs outils IA pour la carrière et plus encore sur Nav ai. Augmentez la productivité, gérez les projets et restez à la pointe avec des guides d'experts et des sélections de premier plan.",
+      "keywords": ""
     },
     "ai": {
-      "titleSubfix": "Répertoire des outils AI de Tap4"
+      "titleSubfix": "Répertoire Nav ai"
     },
     "explore": {
-      "title": "Découvrez les meilleurs outils AI de 2024 | Répertoire des outils AI de Tap4",
-      "titlePrefix": "Explorez le Répertoire des outils AI de Tap4",
-      "titleSuffix": "Répertoire des outils AI de Tap4",
-      "description": "Le Répertoire des outils AI de Tap4 est un outil qui propose un répertoire gratuit d'outils AI. Obtenez vos outils AI préférés avec le Répertoire des outils AI de Tap4, qui vise à collecter tous les outils AI et à fournir le meilleur service aux utilisateurs.",
-      "keywords": "Répertoire des outils AI de Tap4"
+      "title": "Explorez les meilleurs outils IA 2024 | Répertoire Nav ai",
+      "titlePrefix": "Explorez le répertoire Nav ai",
+      "titleSuffix": "Répertoire Nav ai",
+      "description": "Le répertoire Nav ai est un outil qui fournit un répertoire gratuit d'outils IA. Obtenez vos outils IA préférés avec le répertoire Nav ai, qui vise à collecter tous les outils IA et à fournir le meilleur service aux utilisateurs.",
+      "keywords": "Répertoire Nav ai"
     },
     "submit": {
-      "title": "Soumettez votre outil AI et obtenez du trafic | Répertoire des outils AI de Tap4"
+      "title": "Soumettez votre outil IA et obtenez du trafic | Répertoire Nav ai"
     }
   }
 }
