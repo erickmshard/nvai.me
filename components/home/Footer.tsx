@@ -19,7 +19,7 @@ function InfoLink({
     <Link
       href={href}
       title={title}
-      className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm'
+      className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm text-white'
       target={target}
       type={type}
     >
@@ -34,11 +34,11 @@ export default function Footer() {
   const SupportLinks = [
     {
       title: t('tap4'),
-      href: 'https://www.tap4.ai',
+      href: 'https://www.Navai.me',
     },
     {
       title: t('tattoo'),
-      href: 'https://tattooai.design',
+      href: 'https://Navai.me',
     },
   ];
 
@@ -54,10 +54,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className='w-full bg-[#15141A]'>
+    <footer className='w-full bg-[#15141A] text-white'>
       <div className='mx-auto flex min-h-[251px] max-w-pc flex-col items-center justify-between p-10 pb-5 lg:h-[180px] lg:flex-row lg:px-0 lg:pb-10'>
         <div className='flex flex-col items-center lg:items-stretch'>
-          <h1 className='text-xl font-bold text-white lg:h-8 lg:text-[32px]'>{t('title')}</h1>
+          <h1 className='text-xl font-bold lg:h-8 lg:text-[32px]'>{t('title')}</h1>
           <h2 className='text-xs'>{t('subTitle')}</h2>
         </div>
         <div className='mt-5 flex flex-col items-center gap-y-5 lg:mt-0 lg:flex-row lg:items-stretch lg:gap-x-10'>
@@ -69,7 +69,7 @@ export default function Footer() {
                 key={item.href}
                 target='_blank'
                 rel='noreferrer'
-                className='text-xs hover:opacity-70 lg:text-sm'
+                className='text-xs hover:opacity-70 lg:text-sm text-white'
                 title={item.title}
               >
                 {item.title}
@@ -82,7 +82,7 @@ export default function Footer() {
             ))}
             <a
               href={`mailto:${CONTACT_US_EMAIL}`}
-              className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm'
+              className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm text-white'
               title={t('contactUs')}
               type='email'
             >

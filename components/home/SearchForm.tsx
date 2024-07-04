@@ -41,15 +41,15 @@ export default function SearchForm({ defaultSearch }: { defaultSearch?: string }
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <div className='relative flex w-full items-center text-white/40'>
+                <div className='relative flex w-full items-center text-black'>
                   <Input
                     placeholder={t('search')}
                     {...field}
-                    className='h-8 w-full rounded-full border border-white/40 !bg-transparent pr-10 placeholder:text-white/40 lg:h-[38px] lg:w-[392px] lg:pr-12'
+                    className='h-8 w-full rounded-full border border-gray-300 bg-white pr-10 placeholder:text-gray-500 lg:h-[38px] lg:w-[392px] lg:pr-12'
                   />
-                  <Separator className='absolute right-8 h-6 w-px bg-white/40 lg:right-10' orientation='vertical' />
+                  <Separator className='absolute right-8 h-6 w-px bg-gray-300 lg:right-10' orientation='vertical' />
                   <button type='submit' className='absolute right-2 lg:right-3'>
-                    <Search className='size-[18px] lg:size-5' />
+                    <Search className='size-[18px] lg:size-5 text-gray-500' />
                     <span className='sr-only'>search</span>
                   </button>
                 </div>

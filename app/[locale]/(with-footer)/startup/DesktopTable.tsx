@@ -26,14 +26,14 @@ export default function DesktopTable() {
           {STARTUP_LIST.map((item) => (
             <TableRow
               key={item.DA}
-              className='tr-rounded h-16 rounded-[4px] border-none bg-[#2C2D36] hover:bg-[#353746]'
+              className='tr-rounded h-16 rounded-[4px] border-none bg-white hover:bg-gray-100'
             >
-              <TableCell className='text-sm'>{item.DA}</TableCell>
-              <TableCell className='text-[18px]'>{item.Website}</TableCell>
-              <TableCell className='flex gap-1'>
+              <TableCell className='text-sm text-black'>{item.DA}</TableCell>
+              <TableCell className='text-[18px] text-black'>{item.Website}</TableCell>
+              <TableCell className='flex gap-1 text-black'>
                 {item.Tag ? item.Tag.split(',').map((tag) => <TagItem key={tag} title={tag} />) : null}
               </TableCell>
-              <TableCell>
+              <TableCell className='text-black'>
                 <PriceItem title={item.Price} isFree={item.Price.toLowerCase() === 'free'} />
               </TableCell>
               <TableCell>

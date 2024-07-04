@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 100%; /* 保持白色 */
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -36,7 +36,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 84% 4.9%; /* 深蓝色，用于深色模式 */
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground min-h-screen;
   }
 }
 
@@ -97,8 +97,34 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .custom-bg-color {
+    background-color: #f9fafb; /* bg-gray-50 的实际颜色值 */
+  }
 }
 
 .tr-rounded {
   clip-path: xywh(0 0 100% 100% round 4px);
+}
+
+/* MarkdownProse 样式 */
+.prose {
+  color: #000; /* 确保所有文本颜色为黑色 */
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  color: #000; /* 确保所有标题颜色为黑色 */
+}
+
+.prose a {
+  color: #1a0dab; /* 设置链接颜色 */
+}
+
+.prose strong {
+  color: #000; /* 设置加粗文本颜色 */
 }

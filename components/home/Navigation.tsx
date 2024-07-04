@@ -26,17 +26,17 @@ export default function Navigation() {
 
   return (
     <>
-      <header className='bg-frosted-glass sticky left-0 top-0 z-50 flex h-[64px] bg-[#252A464A] px-5 blur-[60%] filter lg:px-0'>
+      <header className='bg-[#2C2D36] sticky left-0 top-0 z-50 flex h-[64px] px-5 lg:px-0'>
         <nav className='mx-auto flex max-w-pc flex-1 items-center'>
           <div>
             <Link className='hover:opacity-80' href='/' title={t('title')}>
               <BaseImage
-                src='/images/tap4-ai.svg'
+                src='/images/navai.svg'
                 alt={t('title')}
                 title={t('title')}
-                width={64}
-                height={64}
-                className='size-[58px] lg:size-16'
+                width={100}
+                height={100}
+                className='w-[150px] h-[120px] lg:w-[300px] lg:h-[200px]' // 修改这里
               />
             </Link>
           </div>

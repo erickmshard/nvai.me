@@ -17,12 +17,12 @@ export default function MobileTable() {
       </div>
       <div className='flex flex-col gap-1'>
         {STARTUP_LIST.map((item) => (
-          <div key={item.DA} className='flex min-h-[99px] items-center justify-between bg-[#2C2D36] p-3'>
+          <div key={item.DA} className='flex min-h-[99px] items-center justify-between bg-white p-3 hover:bg-gray-100'>
             <div className='flex flex-1 flex-col'>
-              <div className='mb-[9px] text-sm'>
+              <div className='mb-[9px] text-sm text-black'>
                 (DA{item.DA}) {item.Website}
               </div>
-              <div className='mb-[6px] flex flex-wrap gap-1'>
+              <div className='mb-[6px] flex flex-wrap gap-1 text-black'>
                 {item.Tag ? item.Tag.split(',').map((tag) => <TagItem key={tag} title={tag} />) : null}
               </div>
               <PriceItem title={item.Price} isFree={item.Price.toLowerCase() === 'free'} />

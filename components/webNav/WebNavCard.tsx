@@ -9,7 +9,7 @@ export default function WebNavCard({ name, thumbnail_url, title, url, content }:
   const t = useTranslations('Home');
 
   return (
-    <div className='flex h-[210px] flex-col gap-3 rounded-xl bg-[#2C2D36] p-1 lg:h-[343px]'>
+    <div className='flex h-[210px] flex-col gap-3 rounded-xl bg-gray-50 p-1 lg:h-[343px] border border-gray-300'>
       <Link href={`/ai/${name}`} title={title} className='group relative'>
         <img
           src={thumbnail_url || ''}
@@ -25,14 +25,14 @@ export default function WebNavCard({ name, thumbnail_url, title, url, content }:
       </Link>
       <div className='flex items-center justify-between px-[6px]'>
         <a href={url} title={title} target='_blank' rel='nofollow' className='hover:opacity-70'>
-          <h3 className='line-clamp-1 flex-1 text-sm font-bold lg:text-base'>{title}</h3>
+          <h3 className='line-clamp-1 flex-1 text-sm font-bold lg:text-base text-black'>{title}</h3>
         </a>
         <a href={url} title={title} target='_blank' rel='nofollow' className='hover:opacity-70'>
-          <SquareArrowOutUpRight className='size-5' />
+          <SquareArrowOutUpRight className='size-5 text-black' />
           <span className='sr-only'>{title}</span>
         </a>
       </div>
-      <p className='line-clamp-3 px-[6px] text-xs text-white/70 lg:line-clamp-5 lg:text-sm'>{content}</p>
+      <p className='line-clamp-3 px-[6px] text-xs text-black/80 lg:line-clamp-5 lg:text-sm'>{content}</p>
     </div>
   );
 }

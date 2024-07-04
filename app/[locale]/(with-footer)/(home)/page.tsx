@@ -42,11 +42,11 @@ export default async function Page() {
   ]);
 
   return (
-    <div className='relative w-full'>
+    <div className='relative w-full bg-gray-50'>
       <div className='relative mx-auto w-full max-w-pc flex-1 px-3 lg:px-0'>
         <div className='my-5 flex flex-col text-center lg:mx-auto lg:my-10 lg:gap-1'>
-          <h1 className='text-2xl font-bold text-white lg:text-5xl'>{t('title')}</h1>
-          <h2 className='text-balance text-xs font-bold text-white lg:text-sm'>{t('subTitle')}</h2>
+          <h1 className='text-2xl font-bold text-black lg:text-5xl'>{t('title')}</h1>
+          <h2 className='text-balance text-xs font-bold text-black lg:text-sm'>{t('subTitle')}</h2>
         </div>
         <div className='flex w-full items-center justify-center'>
           <SearchForm />
@@ -61,14 +61,14 @@ export default async function Page() {
           />
         </div>
         <div className='flex flex-col gap-5'>
-          <h2 className='text-center text-[18px] lg:text-[32px]'>{t('ai-navigate')}</h2>
+          <h2 className='text-center text-[18px] lg:text-[32px] text-black'>{t('ai-navigate')}</h2>
           <WebNavCardList dataList={navigationList!} />
           <Link
             href='/explore'
-            className='mx-auto mb-5 flex w-fit items-center justify-center gap-5 rounded-[9px] border border-white p-[10px] text-sm leading-4 hover:opacity-70'
+            className='mx-auto mb-5 flex w-fit items-center justify-center gap-5 rounded-[9px] border border-black p-[10px] text-sm leading-4 text-black hover:opacity-70'
           >
             {t('exploreMore')}
-            <CircleChevronRight className='mt-[0.5] h-[20px] w-[20px]' />
+            <CircleChevronRight className='mt-[0.5] h-[20px] w-[20px] text-black' />
           </Link>
         </div>
         <Faq />

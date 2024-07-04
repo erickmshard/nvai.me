@@ -9,7 +9,7 @@
     "lint": "next lint --cache",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
