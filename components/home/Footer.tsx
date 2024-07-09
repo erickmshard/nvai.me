@@ -19,7 +19,7 @@ function InfoLink({
     <Link
       href={href}
       title={title}
-      className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm text-white'
+      className='whitespace-nowrap text-xs text-white hover:opacity-70 lg:text-sm'
       target={target}
       type={type}
     >
@@ -69,7 +69,7 @@ export default function Footer() {
                 key={item.href}
                 target='_blank'
                 rel='noreferrer'
-                className='text-xs hover:opacity-70 lg:text-sm text-white'
+                className='text-xs text-white hover:opacity-70 lg:text-sm'
                 title={item.title}
               >
                 {item.title}
@@ -82,16 +82,16 @@ export default function Footer() {
             ))}
             <a
               href={`mailto:${CONTACT_US_EMAIL}`}
-              className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm text-white'
+              className='whitespace-nowrap text-xs text-white hover:opacity-70 lg:text-sm'
               title={t('contactUs')}
               type='email'
             >
               {t('contactUs')}
             </a>
             <a
-              href="https://woy.ai/"
-              className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm text-white'
-              title="Woy AI Tools Directory"
+              href='https://woy.ai/'
+              className='whitespace-nowrap text-xs text-white hover:opacity-70 lg:text-sm'
+              title='Woy AI Tools Directory'
             >
               Woy AI Tools
             </a>
