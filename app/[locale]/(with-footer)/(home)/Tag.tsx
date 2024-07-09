@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export function TagItem({ children }: { children: React.ReactNode }) {
   return (
-    <div className='flex h-[38px] items-center justify-center gap-[2px] whitespace-nowrap rounded-full bg-white px-3 text-xs border border-gray-300'>
+    <div className='flex h-[30px] items-center justify-center gap-[2px] overflow-hidden whitespace-nowrap rounded-full border border-gray-300 bg-white px-2 text-xs transition-all duration-200 ease-in-out hover:border-gray-400 hover:bg-gray-100 hover:shadow-md'>
       {children}
     </div>
   );
@@ -10,7 +10,7 @@ export function TagItem({ children }: { children: React.ReactNode }) {
 
 export function TagLink({ name, href }: { name: string; href: string }) {
   return (
-    <Link href={href} title={name}>
+    <Link href={href} title={name} className='transition-transform duration-200 ease-in-out hover:scale-105'>
       <TagItem>{name}</TagItem>
     </Link>
   );
@@ -18,7 +18,7 @@ export function TagLink({ name, href }: { name: string; href: string }) {
 
 export function TagList({ data }: { data: { name: string; href: string; id: string }[] }) {
   return (
-    <ul className='no-scrollbar flex max-w-full flex-1 items-center gap-3 overflow-auto'>
+    <ul className='flex max-h-[68px] flex-wrap gap-2 overflow-hidden'>
       {data.map((item) => (
         <li key={item.href}>
           <TagLink name={item.name} href={item.href} />
