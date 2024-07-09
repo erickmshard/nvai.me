@@ -88,6 +88,13 @@ export default function Footer() {
             >
               {t('contactUs')}
             </a>
+            <a
+              href="https://woy.ai/"
+              className='whitespace-nowrap text-xs hover:opacity-70 lg:text-sm text-white'
+              title="Woy AI Tools Directory"
+            >
+              Woy AI Tools
+            </a>
           </div>
         </div>
       </div>
