@@ -40,6 +40,10 @@ export default function Footer() {
       title: t('tattoo'),
       href: 'https://Navai.me',
     },
+    {
+      title: 'unblockedgames6x',
+      href: 'https://unblockedgames6x.cc',
+    },
   ];
 
   const INFO_LIST = [
