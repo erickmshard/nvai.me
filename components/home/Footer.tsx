@@ -41,8 +41,12 @@ export default function Footer() {
       href: 'https://Navai.me',
     },
     {
-      title: 'unblockedgames6x',
-      href: 'https://unblockedgames6x.cc',
+      title: 'Golf Invaders',
+      href: 'https://golfinvaders.com/',
+    },
+    {
+      title: 'Craft Drill Clicker',
+      href: 'https://craftdrillclicker.com/',
     },
   ];
 
