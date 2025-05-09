@@ -48,6 +48,10 @@ export default function Footer() {
       title: 'Craft Drill Clicker',
       href: 'https://craftdrillclicker.com/',
     },
+    {
+      title: 'Relaxing Sleeping Music',
+      href: 'https://relaxingsleepingmusic.online/',
+    },
   ];
 
   const INFO_LIST = [
