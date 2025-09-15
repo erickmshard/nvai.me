@@ -52,6 +52,10 @@ export default function Footer() {
       title: 'Relaxing Sleeping Music',
       href: 'https://relaxingsleepingmusic.online/',
     },
+    {
+      title: 'Middle name generator',
+      href: 'https://middlenamegenerator.net/',
+    },
   ];
 
   const INFO_LIST = [
