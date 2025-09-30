@@ -2,7 +2,7 @@ import { createClient } from '@/db/supabase/client';
 
 import SearchForm from '@/components/home/SearchForm';
 import BasePagination from '@/components/page/BasePagination';
-import WebNavCardList from '@/components/webNav/WebNavCardList';
+import WebNavRowList from '@/components/webNav/WebNavRowList';
 
 import { TagList } from '../(home)/Tag';
 
@@ -26,28 +26,35 @@ export default async function ExploreList({ pageNum }: { pageNum?: string }) {
   ]);
 
   return (
-    <>
-      <div className='flex w-full items-center justify-center'>
-        <SearchForm />
-      </div>
-      <div className='mb-10 mt-5'>
+    <div className='grid grid-cols-1 items-start gap-5 lg:grid-cols-[260px_1fr]'>
+      <aside className='sticky top-20 hidden h-fit lg:block'>
+        <h3 className='mb-3 text-sm font-semibold text-black/80'>Categories</h3>
         <TagList
+          colorful
+          showIcons
+          direction='column'
+          maxHeight='auto'
           data={categoryList!.map((item) => ({
             id: String(item.id),
             name: item.name,
             href: `/category/${item.name}`,
           }))}
         />
-      </div>
-      <WebNavCardList dataList={navigationList!} />
-      <BasePagination
-        currentPage={currentPage}
-        pageSize={WEB_PAGE_SIZE}
-        total={count!}
-        route='/explore'
-        subRoute='/page'
-        className='my-5 lg:my-10'
-      />
-    </>
+      </aside>
+      <section className='space-y-4'>
+        <div className='flex w-full items-center justify-end'>
+          <SearchForm />
+        </div>
+        <WebNavRowList dataList={navigationList!} />
+        <BasePagination
+          currentPage={currentPage}
+          pageSize={WEB_PAGE_SIZE}
+          total={count!}
+          route='/explore'
+          subRoute='/page'
+          className='my-5 lg:my-10'
+        />
+      </section>
+    </div>
   );
 }

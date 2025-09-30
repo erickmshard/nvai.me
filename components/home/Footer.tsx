@@ -40,6 +40,9 @@ export default function Footer() {
       title: t('tattoo'),
       href: 'https://Navai.me',
     },
+  ];
+
+  const FriendLinks = [
     {
       title: 'Golf Invaders',
       href: 'https://golfinvaders.com/',
@@ -55,6 +58,10 @@ export default function Footer() {
     {
       title: 'Middle name generator',
       href: 'https://middlenamegenerator.net/',
+    },
+    {
+      title: 'Woy AI Tools',
+      href: 'https://woy.ai/',
     },
   ];
 
@@ -104,15 +111,26 @@ export default function Footer() {
             >
               {t('contactUs')}
             </a>
-            <a
-              href='https://woy.ai/'
-              className='whitespace-nowrap text-xs text-white hover:opacity-70 lg:text-sm'
-              title='Woy AI Tools Directory'
-            >
-              Woy AI Tools
-            </a>
           </div>
         </div>
+      </div>
+      <div className='mx-auto mt-2 w-full max-w-pc border-t border-white/10 px-10 pb-12 pt-4 lg:mt-4 lg:px-0 lg:pb-14 lg:pt-6'>
+        <h3 className='mb-3 text-sm font-bold'>Friend Links</h3>
+        <ul className='flex flex-wrap gap-3'>
+          {FriendLinks.map((item) => (
+            <li key={item.href}>
+              <a
+                href={item.href}
+                target='_blank'
+                rel='noreferrer'
+                className='rounded-full border border-white/20 px-3 py-1 text-xs text-white transition-opacity hover:opacity-80 lg:text-sm'
+                title={item.title}
+              >
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </footer>
   );

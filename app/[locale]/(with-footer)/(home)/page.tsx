@@ -53,6 +53,9 @@ export default async function Page() {
         </div>
         <div className='mb-10 mt-5'>
           <TagList
+            colorful
+            showIcons
+            maxHeight={144}
             data={categoryList!.map((item) => ({
               id: String(item.id),
               name: item.name,
@@ -61,7 +64,7 @@ export default async function Page() {
           />
         </div>
         <div className='flex flex-col gap-5'>
-          <h2 className='text-center text-[18px] lg:text-[32px] text-black'>{t('ai-navigate')}</h2>
+          <h2 className='text-center text-[18px] text-black lg:text-[32px]'>{t('ai-navigate')}</h2>
           <WebNavCardList dataList={navigationList!} />
           <Link
             href='/explore'

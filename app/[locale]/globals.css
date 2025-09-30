@@ -107,9 +107,9 @@
   clip-path: xywh(0 0 100% 100% round 4px);
 }
 
-/* MarkdownProse 样式 */
+/* Markdown/Prose 基础色，跟随主题 */
 .prose {
-  color: #000; /* 确保所有文本颜色为黑色 */
+  color: hsl(var(--foreground));
 }
 
 .prose h1,
@@ -118,13 +118,15 @@
 .prose h4,
 .prose h5,
 .prose h6 {
-  color: #000; /* 确保所有标题颜色为黑色 */
+  color: hsl(var(--foreground));
 }
 
 .prose a {
-  color: #1a0dab; /* 设置链接颜色 */
+  color: #2C2D36; /* 适配首页主色 */
+  text-decoration-color: rgba(44, 45, 54, 0.25);
+  text-underline-offset: 3px;
 }
 
 .prose strong {
-  color: #000; /* 设置加粗文本颜色 */
+  color: hsl(var(--foreground));
 }
