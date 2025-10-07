@@ -2,10 +2,14 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
+const isWindows = process.platform === 'win32';
+const isVercel = Boolean(process.env.VERCEL);
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Avoid writing trace files which can be locked on Windows
-  outputFileTracing: false,
+  // Keep tracing enabled on Vercel so required RSC manifests are bundled.
+  // Only disable locally on Windows to avoid file locking issues.
+  outputFileTracing: isVercel ? true : !isWindows,
   env: {
     NEXT_BASE_API: process.env.NEXT_BASE_API,
   },
