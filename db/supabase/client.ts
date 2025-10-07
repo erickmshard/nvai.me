@@ -5,8 +5,31 @@ import { createBrowserClient } from '@supabase/ssr';
 import { Database } from './types';
 
 export function createClient() {
-  return createBrowserClient<Database>(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-  );
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!url || !anonKey) {
+    if (process.env.NODE_ENV !== 'production') {
+      // eslint-disable-next-line no-console
+      console.warn('[supabase] Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY. Using no-op client.');
+    }
+
+    // Provide a minimal no-op client to avoid hard crashes in production
+    // when environment variables are not configured. All queries resolve to
+    // empty results so pages can render with fallbacks instead of 500.
+    const chain: any = {
+      select: () => chain,
+      eq: () => chain,
+      order: () => chain,
+      range: () => chain,
+      limit: () => chain,
+      ilike: () => chain,
+      single: async () => ({ data: null, error: null, count: 0 }),
+      maybeSingle: async () => ({ data: null, error: null, count: 0 }),
+      then: (resolve: any) => resolve({ data: [], error: null, count: 0 }),
+    };
+    return { from: () => chain } as any;
+  }
+
+  return createBrowserClient<Database>(url, anonKey);
 }
