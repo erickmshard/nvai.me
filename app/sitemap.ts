@@ -1,5 +1,6 @@
 import { type MetadataRoute } from 'next';
 import { createClient } from '@/db/supabase/client';
+import type { NavigationCategory, Tutorial, WebNavigation } from '@/db/supabase/types';
 import { locales } from '@/i18n';
 
 import { InfoPageSize } from '@/lib/constants';
@@ -62,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       add(`/tutorials/page/${p}`, { lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 });
     }
 
-    (tutorialList || []).forEach((t) => {
+    (tutorialList || []).forEach((t: Pick<Tutorial, 'slug' | 'updated_at'>) => {
       const slug = encodeURIComponent(t.slug);
       add(`/tutorials/${slug}`, {
         lastModified: t.updated_at ? new Date(t.updated_at) : new Date(),
@@ -75,7 +76,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Categories with pagination
   {
     const { data: categories } = await supabase.from('navigation_category').select('name');
-    const names = (categories || []).map((c) => c.name).filter(Boolean);
+    const names = (categories || []).map((c: Pick<NavigationCategory, 'name'>) => c.name).filter(Boolean) as string[];
 
     // For each category, add base route and paginated routes
     // Uses InfoPageSize for category listing (aligned with codebase)
@@ -109,7 +110,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .from('web_navigation')
       .select('name, collection_time')
       .order('collection_time', { ascending: false });
-    (navItems || []).forEach((item) => {
+    (navItems || []).forEach((item: Pick<WebNavigation, 'name' | 'collection_time'>) => {
       const namePath = encodeURIComponent(item.name);
       add(`/ai/${namePath}`, {
         lastModified: item.collection_time ? new Date(item.collection_time) : new Date(),

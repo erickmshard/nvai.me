@@ -47,11 +47,15 @@ export default async function RootLayout({
   );
 }
 
+function resolveBaseUrl() {
+  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL as string | undefined;
+  if (fromEnv && /^https?:\/\//i.test(fromEnv)) return fromEnv;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return 'http://localhost:3000';
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    (process.env.NEXT_PUBLIC_SITE_URL as string) ||
-      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'),
-  ),
+  metadataBase: new URL(resolveBaseUrl()),
   icons: { icon: '/favicon.ico' },
   openGraph: {
     type: 'website',

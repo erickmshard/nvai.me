@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 
-import { createBrowserClient } from '@supabase/ssr';
+import { cookies } from 'next/headers';
+import { createBrowserClient, createServerClient } from '@supabase/ssr';
 
 import { Database } from './types';
 
@@ -29,6 +30,31 @@ export function createClient() {
       then: (resolve: any) => resolve({ data: [], error: null, count: 0 }),
     };
     return { from: () => chain } as any;
+  }
+
+  if (typeof window === 'undefined') {
+    const cookieStore = cookies();
+    return createServerClient<Database>(url, anonKey, {
+      cookies: {
+        get(name: string) {
+          return cookieStore.get(name)?.value;
+        },
+        set(name: string, value: string, options: any) {
+          try {
+            cookieStore.set({ name, value, ...options });
+          } catch (_) {
+            // Ignore in RSC where setting cookies is not allowed
+          }
+        },
+        remove(name: string, options: any) {
+          try {
+            cookieStore.set({ name, value: '', ...options });
+          } catch (_) {
+            // Ignore in RSC where setting cookies is not allowed
+          }
+        },
+      },
+    });
   }
 
   return createBrowserClient<Database>(url, anonKey);
