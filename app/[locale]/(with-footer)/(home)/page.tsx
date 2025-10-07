@@ -22,7 +22,6 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   });
 
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL as string),
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),

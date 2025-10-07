@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { useMessages } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 import { Toaster } from '@/components/ui/sonner';
 import GoogleAdScript from '@/components/ad/GoogleAdScript';
@@ -13,14 +13,14 @@ import { Suspense } from 'react';
 
 import Loading from './loading';
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const messages = useMessages();
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning className=''>
