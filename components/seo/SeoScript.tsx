@@ -1,3 +1,5 @@
+'use client';
+
 import Script from 'next/script';
 
 import { GOOGLE_TRACKING_ID } from '@/lib/env';

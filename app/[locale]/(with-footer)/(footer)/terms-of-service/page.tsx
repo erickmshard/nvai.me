@@ -1,5 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: { canonical: '/terms-of-service' },
+  };
+}
 
 export default function Page() {
   const t = useTranslations('FooterNavigation.termsConditions');

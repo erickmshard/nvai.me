@@ -18,8 +18,28 @@ export async function generateMetadata({ params }: { params: { code: string; pag
     notFound();
   }
 
+  const baseTitle = categoryList[0].title || params.code;
+  const currentPage = Number(params?.pageNum || 1);
+  const title = `${baseTitle} - Page ${currentPage}`;
+  const description = `Browse ${baseTitle} AI tools (page ${currentPage}) on Nav ai Directory.`;
   return {
-    title: categoryList[0].title,
+    title,
+    description,
+    alternates: { canonical: `/category/${encodeURIComponent(params.code)}/page/${currentPage}` },
+    openGraph: {
+      type: 'website',
+      url: `/category/${encodeURIComponent(params.code)}/page/${currentPage}`,
+      title,
+      description,
+      siteName: 'Nav ai Directory',
+      images: ['/images/tap4-ai.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/images/tap4-ai.png'],
+    },
   };
 }
 

@@ -112,6 +112,36 @@ export type Database = {
         };
         Relationships: [];
       };
+      tutorials: {
+        Row: {
+          id: number;
+          slug: string;
+          title: string;
+          summary: string | null;
+          content_md: string;
+          cover_url: string | null;
+          updated_at: string;
+        };
+        Insert: {
+          id?: number;
+          slug: string;
+          title: string;
+          summary?: string | null;
+          content_md: string;
+          cover_url?: string | null;
+          updated_at?: string;
+        };
+        Update: {
+          id?: number;
+          slug?: string;
+          title?: string;
+          summary?: string | null;
+          content_md?: string;
+          cover_url?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
     };
     Views: {
       [_ in never]: never;
@@ -131,6 +161,7 @@ export type Database = {
 export type NavigationCategory = Database['public']['Tables']['navigation_category']['Row'];
 export type Submit = Database['public']['Tables']['submit']['Row'];
 export type WebNavigation = Database['public']['Tables']['web_navigation']['Row'];
+export type Tutorial = Database['public']['Tables']['tutorials']['Row'];
 
 type PublicSchema = Database[Extract<keyof Database, 'public'>];
 

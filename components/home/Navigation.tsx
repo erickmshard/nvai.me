@@ -15,7 +15,7 @@ import NavigationDrawer from './NavigationDrawer';
 
 export default function Navigation() {
   const t = useTranslations('Navigation');
-  const pathname = usePathname();
+  const pathname = usePathname() ?? '';
 
   const [open, setOpen] = useState(false);
 
@@ -26,7 +26,7 @@ export default function Navigation() {
 
   return (
     <>
-      <header className='bg-[#2C2D36] sticky left-0 top-0 z-50 flex h-[64px] px-5 lg:px-0'>
+      <header className='sticky left-0 top-0 z-50 flex h-[64px] bg-[#2C2D36] px-5 lg:px-0'>
         <nav className='mx-auto flex max-w-pc flex-1 items-center'>
           <div>
             <Link className='hover:opacity-80' href='/' title={t('title')}>
@@ -36,7 +36,7 @@ export default function Navigation() {
                 title={t('title')}
                 width={100}
                 height={100}
-                className='w-[150px] h-[120px] lg:w-[300px] lg:h-[200px]' // 修改这里
+                className='h-[120px] w-[150px] lg:h-[200px] lg:w-[300px]' // 修改这里
               />
             </Link>
           </div>

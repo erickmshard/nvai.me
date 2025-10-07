@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function NotFound() {
-  const t = useTranslations('NotFound');
+export default async function NotFound() {
+  const t = await getTranslations('NotFound');
   return (
     <div className='flex w-screen flex-1 items-center justify-center'>
       <div className='flex flex-col items-center gap-4'>

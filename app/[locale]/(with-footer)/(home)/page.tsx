@@ -10,6 +10,7 @@ import Faq from '@/components/Faq';
 import SearchForm from '@/components/home/SearchForm';
 import WebNavCardList from '@/components/webNav/WebNavCardList';
 
+import HomeTutorialsSection from './HomeTutorialsSection';
 import { TagList } from './Tag';
 
 const ScrollToTop = dynamic(() => import('@/components/page/ScrollToTop'), { ssr: false });
@@ -25,8 +26,22 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
+    openGraph: {
+      type: 'website',
+      url: '/',
+      title: t('title'),
+      description: t('description'),
+      siteName: 'Nav ai Directory',
+      images: ['/images/tap4-ai.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: ['/images/tap4-ai.png'],
+    },
     alternates: {
-      canonical: './',
+      canonical: '/',
     },
   };
 }
@@ -56,7 +71,7 @@ export default async function Page() {
             colorful
             showIcons
             maxHeight={144}
-            data={categoryList!.map((item) => ({
+            data={categoryList!.map((item: { id: number | string; name: string }) => ({
               id: String(item.id),
               name: item.name,
               href: `/category/${item.name}`,
@@ -74,6 +89,7 @@ export default async function Page() {
             <CircleChevronRight className='mt-[0.5] h-[20px] w-[20px] text-black' />
           </Link>
         </div>
+        <HomeTutorialsSection />
         <Faq />
         <ScrollToTop />
       </div>

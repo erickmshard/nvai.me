@@ -15,7 +15,11 @@ import Loading from './loading';
 
 const ScrollToTop = dynamic(() => import('@/components/page/ScrollToTop'), { ssr: false });
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({
+  params: { locale, search },
+}: {
+  params: { locale: string; search?: string };
+}): Promise<Metadata> {
   const t = await getTranslations({
     locale,
     namespace: 'Metadata.home',
@@ -25,6 +29,23 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
+    openGraph: {
+      type: 'website',
+      url: `/query/${encodeURIComponent(search || '')}`,
+      title: t('title'),
+      description: t('description'),
+      siteName: 'Nav ai Directory',
+      images: ['/images/tap4-ai.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images: ['/images/tap4-ai.png'],
+    },
+    alternates: {
+      canonical: `/query/${encodeURIComponent(search || '')}`,
+    },
   };
 }
 

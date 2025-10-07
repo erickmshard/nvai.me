@@ -5,6 +5,7 @@
   "Navigation": {
     "title": "Nav ai Tools Directory",
     "discover": "Discover AI",
+    "tutorials": "Tutorials",
     "submit": "Submit",
     "newtools": "New Tools",
     "startup": "Startup",
@@ -127,6 +128,12 @@
     "result": "Search Result",
     "empty": "No data available"
   },
+  "Tutorials": {
+    "title": "Tutorials",
+    "subTitle": "Expert guides and how-tos for AI and productivity.",
+    "empty": "No tutorials yet.",
+    "viewMore": "View More"
+  },
   "Category": {
     "home": "home",
     "empty": "No data available"
@@ -177,6 +184,10 @@
       "titleSuffix": "Nav ai Directory",
       "description": "Nav ai Directory is a tool provides free AI Tools Directory. Get your favorite AI tools with Nav ai Directory, Nav ai Directory aims to collect all the AI tools and provide the best for users.",
       "keywords": "Nav ai Directory"
+    },
+    "tutorials": {
+      "title": "Tutorials | Nav ai Directory",
+      "description": "Expert tutorials and how-tos on AI tools and productivity curated by Navai.me."
     },
     "submit": {
       "title": "Submit your AI tool and get Get Traffic | Nav ai Directory"

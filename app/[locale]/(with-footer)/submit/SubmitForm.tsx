@@ -1,122 +1,48 @@
 'use client';
 
-/* eslint-disable react/jsx-props-no-spreading */
-import { useState } from 'react';
-import { createClient } from '@/db/supabase/client';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useTranslations } from 'next-intl';
-import { useForm } from 'react-hook-form';
-import { toast } from 'sonner';
-import { z } from 'zod';
-
-import { FORM_PLACEHOLDER, WEBSITE_EXAMPLE } from '@/lib/constants';
 import { cn } from '@/lib/utils';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import Spinning from '@/components/Spinning';
-
-const FormSchema = z.object({
-  website: z.string(),
-  url: z.string().url(),
-});
 
 export default function SubmitForm({ className }: { className?: string }) {
-  const supabase = createClient();
-  const t = useTranslations('Submit');
-
-  const [loading, setLoading] = useState(false);
-
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
-    defaultValues: {
-      website: '',
-      url: '',
-    },
-  });
-
-  const onSubmit = async (formData: z.infer<typeof FormSchema>) => {
-    let errMsg: any = t('networkError');
-    try {
-      setLoading(true);
-      const { error } = await supabase.from('submit').insert({
-        name: formData.website,
-        url: formData.url,
-        // email: ''
-      });
-      if (error) {
-        errMsg = error.message;
-        throw new Error();
-      }
-      toast.success(t('success'));
-      form.reset();
-    } catch (error) {
-      toast.error(errMsg);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className={cn(
-          'mx-3 mb-5 flex h-[449px] flex-col justify-between rounded-[12px] bg-white px-3 py-5 lg:h-[557px] lg:w-[444px] lg:p-8',
-          className,
-        )}
-      >
-        <div className='space-y-3 lg:space-y-5'>
-          <FormField
-            control={form.control}
-            name='website'
-            render={({ field }) => (
-              <FormItem className='space-y-1'>
-                <FormLabel>{t('website')}</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder='Nav AI'
-                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] bg-white p-5'
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name='url'
-            render={({ field }) => (
-              <FormItem className='space-y-1'>
-                <FormLabel>{t('url')}</FormLabel>
-                <FormControl>
-                  <Input
-                    placeholder={FORM_PLACEHOLDER}
-                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] bg-white p-5'
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
-        <div className='flex flex-col gap-[10px] lg:gap-8'>
-          <button
-            type='submit'
-            disabled={loading}
-            className={cn(
-              'flex-center mt-auto h-[48px] w-full gap-4 rounded-[8px] bg-[#2C2D36] text-center font-bold text-white hover:cursor-pointer hover:opacity-80',
-              loading && 'hover:cursor-not-allowed',
-            )}
-          >
-            {loading ? <Spinning className='size-[22px]' /> : t('submit')}
-          </button>
-          <p className='text-[13px] text-[#2C2D36]'>
-            {t('add')} <span dangerouslySetInnerHTML={{ __html: WEBSITE_EXAMPLE }} /> {t('text')}
+    <div className={cn('mx-3 mb-5 lg:w-[444px]', className)}>
+      <div className='rounded-2xl bg-gradient-to-r from-pink-500/50 via-fuchsia-500/50 to-purple-600/50 p-[1px] shadow-[0_10px_30px_rgba(44,45,54,0.08)]'>
+        <div className='rounded-[16px] bg-white px-5 py-6 lg:px-7 lg:py-8'>
+          <div className='flex items-start gap-3'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              className='size-6 text-purple-600'
+            >
+              <path
+                fillRule='evenodd'
+                d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm10.5-4.125a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM9.75 10.5a.75.75 0 0 0 0 1.5h.375v4.125H9.75a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-.375V10.5H14.25a.75.75 0 0 0 0-1.5h-4.5Z'
+                clipRule='evenodd'
+              />
+            </svg>
+            <h3 className='text-2xl font-bold tracking-tight text-[#2C2D36]'>Submission Notice</h3>
+          </div>
+
+          <p className='mt-3 text-[14px] leading-7 text-[#2C2D36]/90'>
+            Due to a heavy workload, the directory currently only accepts reciprocal listings for websites that have
+            been online for at least one year. “New websites” refers to sites less than one year old; listing them
+            requires a $3.99 fee.
           </p>
+
+          <div className='mt-5 flex flex-wrap items-center gap-3'>
+            <span className='text-sm text-[#2C2D36]/80'>If you accept this, please email</span>
+            <a
+              href='mailto:cyberoneaillc@gmail.com'
+              className='inline-flex items-center gap-2 rounded-md bg-[#2C2D36] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90'
+            >
+              cyberoneaillc@gmail.com
+            </a>
+          </div>
+
+          <hr className='my-5 border-dashed border-gray-200' />
+          <p className='text-sm text-gray-600'>Wishing you a smooth and successful workday!</p>
         </div>
-      </form>
-    </Form>
+      </div>
+    </div>
   );
 }

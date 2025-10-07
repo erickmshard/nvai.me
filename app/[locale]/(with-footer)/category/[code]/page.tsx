@@ -18,8 +18,26 @@ export async function generateMetadata({ params }: { params: { code: string } })
     notFound();
   }
 
+  const title = categoryList[0].title || params.code;
+  const description = `Discover the best ${title} AI tools on Nav ai Directory. Updated daily.`;
   return {
-    title: categoryList[0].title,
+    title,
+    description,
+    alternates: { canonical: `/category/${encodeURIComponent(params.code)}` },
+    openGraph: {
+      type: 'website',
+      url: `/category/${encodeURIComponent(params.code)}`,
+      title,
+      description,
+      siteName: 'Nav ai Directory',
+      images: ['/images/tap4-ai.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/images/tap4-ai.png'],
+    },
   };
 }
 

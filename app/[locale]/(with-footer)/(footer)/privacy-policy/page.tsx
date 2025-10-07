@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    alternates: { canonical: '/privacy-policy' },
+  };
+}
 
 export default function Page() {
   const t = useTranslations('FooterNavigation.privacyPolicy');

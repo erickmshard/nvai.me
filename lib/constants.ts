@@ -4,6 +4,10 @@ export const NAV_LINKS = [
     href: '/explore',
   },
   {
+    code: 'tutorials',
+    href: '/tutorials',
+  },
+  {
     code: 'submit',
     href: '/submit',
   },
@@ -23,8 +27,7 @@ export const InfoPageSize = 12;
 
 export const FORM_PLACEHOLDER = 'https://navai.me/';
 
-export const WEBSITE_EXAMPLE =
-  '<a href="https://navai.me/" title="Nav AI Tools Directory">AI Tools Directory</a>';
+export const WEBSITE_EXAMPLE = '<a href="https://navai.me/" title="Nav AI Tools Directory">AI Tools Directory</a>';
 
 export const STARTUP_LIST = [
   {

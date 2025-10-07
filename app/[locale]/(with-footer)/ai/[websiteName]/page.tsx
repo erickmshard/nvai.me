@@ -24,9 +24,27 @@ export async function generateMetadata({
     notFound();
   }
 
+  const title = `${data[0].title} | ${t('titleSubfix')}`;
+  const description = data[0].content;
+  const image = data[0].thumbnail_url || undefined;
   return {
-    title: `${data[0].title} | ${t('titleSubfix')}`,
-    description: data[0].content,
+    title,
+    description,
+    alternates: { canonical: `/ai/${encodeURIComponent(websiteName)}` },
+    openGraph: {
+      type: 'website',
+      url: `/ai/${encodeURIComponent(websiteName)}`,
+      title,
+      description,
+      siteName: 'Nav ai Directory',
+      images: image ? [image] : ['/images/tap4-ai.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: image ? [image] : ['/images/tap4-ai.png'],
+    },
   };
 }
 

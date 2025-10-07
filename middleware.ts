@@ -1,8 +1,6 @@
-import { type NextRequest } from 'next/server';
-
 import intlMiddleware from './middlewares/intlMiddleware';
 
-export default function middleware(request: NextRequest) {
+export default function middleware(request: Parameters<typeof intlMiddleware>[0]) {
   return intlMiddleware(request);
 }
 

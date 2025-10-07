@@ -8,13 +8,31 @@ import Faq from '@/components/Faq';
 import SubmitForm from './SubmitForm';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
-  const t = await getTranslations({
-    locale,
-    namespace: 'Metadata.submit',
-  });
+  const [meta, submit] = await Promise.all([
+    getTranslations({ locale, namespace: 'Metadata.submit' }),
+    getTranslations({ locale, namespace: 'Submit' }),
+  ]);
 
   return {
-    title: t('title'),
+    title: meta('title'),
+    description: submit('subTitle'),
+    openGraph: {
+      type: 'website',
+      url: '/submit',
+      title: meta('title'),
+      description: submit('subTitle'),
+      siteName: 'Nav ai Directory',
+      images: ['/images/tap4-ai.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta('title'),
+      description: submit('subTitle'),
+      images: ['/images/tap4-ai.png'],
+    },
+    alternates: {
+      canonical: '/submit',
+    },
   };
 }
 

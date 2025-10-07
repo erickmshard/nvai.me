@@ -25,7 +25,7 @@ function NavDrawerItem({ isActive, name }: { isActive: boolean; name: string }) 
 
 export default function NavigationDrawer({ open, setOpen }: { open: boolean; setOpen: (open: boolean) => void }) {
   const t = useTranslations('Navigation');
-  const pathname = usePathname();
+  const pathname = usePathname() ?? '';
   const [isOpen, setIsOpen] = useState(open);
   const router = useRouter();
 

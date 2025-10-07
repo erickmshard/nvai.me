@@ -4,8 +4,14 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Avoid writing trace files which can be locked on Windows
+  outputFileTracing: false,
   env: {
     NEXT_BASE_API: process.env.NEXT_BASE_API,
+  },
+  eslint: {
+    // Avoid blocking builds on ESLint plugin issues; run lint separately
+    ignoreDuringBuilds: true,
   },
   logging: {
     fetches: {

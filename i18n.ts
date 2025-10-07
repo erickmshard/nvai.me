@@ -7,46 +7,6 @@ export const languages = [
     lang: 'en',
     label: 'English',
   },
-  {
-    code: 'ja-JP',
-    lang: 'jp',
-    label: '日本語',
-  },
-  {
-    code: 'de-DE',
-    lang: 'de',
-    label: 'Deutsch',
-  },
-  {
-    code: 'es-ES',
-    lang: 'es',
-    label: 'Español',
-  },
-  {
-    code: 'fr-FR',
-    lang: 'fr',
-    label: 'Français',
-  },
-  {
-    code: 'pt-BR',
-    lang: 'pt',
-    label: 'Português',
-  },
-  {
-    code: 'ru-RU',
-    lang: 'ru',
-    label: 'Русский',
-  },
-  {
-    code: 'zh-CN',
-    lang: 'cn',
-    label: '简体中文',
-  },
-  {
-    code: 'zh-TW',
-    lang: 'tw',
-    label: '繁體中文',
-  },
 ];
 
 export const locales = languages.map((lang) => lang.lang);
@@ -57,5 +17,8 @@ export default getRequestConfig(async ({ locale }) => {
 
   return {
     messages: (await import(`./messages/${locale}.json`)).default,
+    // Set a global default time zone to avoid ENVIRONMENT_FALLBACK warnings
+    // and SSR/CSR markup mismatches.
+    timeZone: process.env.DEFAULT_TIME_ZONE || 'UTC',
   };
 });

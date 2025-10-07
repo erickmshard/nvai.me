@@ -109,7 +109,7 @@ export default function BasePagination({
 
     const searchParamsObj: Record<string, string | null> = {};
     searchParamsKeys?.forEach((key) => {
-      searchParamsObj[key] = searchParams.get(key);
+      searchParamsObj[key] = searchParams?.get(key) ?? null;
     });
 
     return objToQueryStr(routeStr, searchParamsObj);
