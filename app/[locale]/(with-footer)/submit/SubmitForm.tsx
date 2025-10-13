@@ -32,10 +32,10 @@ export default function SubmitForm({ className }: { className?: string }) {
           <div className='mt-5 flex flex-wrap items-center gap-3'>
             <span className='text-sm text-[#2C2D36]/80'>If you accept this, please email</span>
             <a
-              href='mailto:cyberoneaillc@gmail.com'
+              href='mailto:erick.mshard@gmail.com'
               className='inline-flex items-center gap-2 rounded-md bg-[#2C2D36] px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90'
             >
-              cyberoneaillc@gmail.com
+              erick.mshard@gmail.com
             </a>
           </div>
 

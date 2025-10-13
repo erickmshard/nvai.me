@@ -1,9 +1,6 @@
-dist
-node_modules
-.next
-.vscode
-build
-messages
-components.json
-components/ui/
-api/
+node_modules/
+.next/
+
+# Ignore generated TypeScript declaration files
+**/*.d.ts
+

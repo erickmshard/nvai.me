@@ -31,6 +31,8 @@ export default function TutorialRowList({ dataList }: { dataList: TutorialListIt
                 alt={item.title}
                 width={120}
                 height={80}
+                loading='lazy'
+                decoding='async'
                 className='h-20 w-28 rounded-lg bg-white object-cover ring-1 ring-black/5 lg:h-[88px] lg:w-36'
               />
             ) : (

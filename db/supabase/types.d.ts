@@ -4,6 +4,105 @@ export type Json = string | number | boolean | null | { [key: string]: Json | un
 export type Database = {
   public: {
     Tables: {
+      windows_app: {
+        Row: {
+          name: string;
+          title: string;
+          icon_url: string | null;
+          content: string | null;
+          detail: string;
+          download_url: string;
+          category: string | null;
+          created_at: string;
+        };
+        Insert: {
+          name: string;
+          title: string;
+          icon_url?: string | null;
+          content?: string | null;
+          detail: string;
+          download_url: string;
+          category?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          name?: string;
+          title?: string;
+          icon_url?: string | null;
+          content?: string | null;
+          detail?: string;
+          download_url?: string;
+          category?: string | null;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
+      mac_app: {
+        Row: {
+          name: string;
+          title: string;
+          icon_url: string | null;
+          content: string | null;
+          detail: string;
+          download_url: string;
+          category: string | null;
+          created_at: string;
+        };
+        Insert: {
+          name: string;
+          title: string;
+          icon_url?: string | null;
+          content?: string | null;
+          detail: string;
+          download_url: string;
+          category?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          name?: string;
+          title?: string;
+          icon_url?: string | null;
+          content?: string | null;
+          detail?: string;
+          download_url?: string;
+          category?: string | null;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
+      android_app: {
+        Row: {
+          name: string;
+          title: string;
+          icon_url: string | null;
+          content: string | null;
+          detail: string;
+          download_url: string;
+          category: string | null;
+          created_at: string;
+        };
+        Insert: {
+          name: string;
+          title: string;
+          icon_url?: string | null;
+          content?: string | null;
+          detail: string;
+          download_url: string;
+          category?: string | null;
+          created_at?: string;
+        };
+        Update: {
+          name?: string;
+          title?: string;
+          icon_url?: string | null;
+          content?: string | null;
+          detail?: string;
+          download_url?: string;
+          category?: string | null;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
       navigation_category: {
         Row: {
           create_by: number;
@@ -162,6 +261,9 @@ export type NavigationCategory = Database['public']['Tables']['navigation_catego
 export type Submit = Database['public']['Tables']['submit']['Row'];
 export type WebNavigation = Database['public']['Tables']['web_navigation']['Row'];
 export type Tutorial = Database['public']['Tables']['tutorials']['Row'];
+export type WindowsApp = Database['public']['Tables']['windows_app']['Row'];
+export type MacApp = Database['public']['Tables']['mac_app']['Row'];
+export type AndroidApp = Database['public']['Tables']['android_app']['Row'];
 
 type PublicSchema = Database[Extract<keyof Database, 'public'>];
 

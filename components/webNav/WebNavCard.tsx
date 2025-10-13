@@ -46,6 +46,8 @@ export default function WebNavCard({ name, thumbnail_url, title, url, content }:
           title={title}
           width={310}
           height={174}
+          loading='lazy'
+          decoding='async'
           className='aspect-[310/174] w-full rounded-xl bg-white/40 ring-1 ring-black/5 hover:opacity-70'
         />
         <div className='absolute inset-0 z-10 hidden items-center justify-center gap-1 rounded-xl bg-black/50 text-xl text-white transition-all duration-200 group-hover:flex'>

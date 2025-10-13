@@ -1,28 +1,8 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb", "airbnb-typescript", "prettier"],
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "globals": {
-    "React": "readonly"
-  },
-  "plugins": ["prettier"],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
+  "root": true,
+  "extends": ["next/core-web-vitals"],
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "jsx-quotes": [2, "prefer-single"],
-    "react/jsx-one-expression-per-line": "off",
-    "function-paren-newline": "off",
-    "max-len": "off",
-    "implicit-arrow-linebreak": "off",
-    "operator-linebreak": "off",
-    "react/require-default-props": "off",
-    "object-curly-newline": "off",
-    "linebreak-style": "off",
-    "no-bitwise": "off",
-    "react/no-array-index-key": "off"
+    "@next/next/no-img-element": "off"
   }
 }
+

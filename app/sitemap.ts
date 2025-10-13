@@ -1,6 +1,6 @@
 import { type MetadataRoute } from 'next';
 import { createClient } from '@/db/supabase/client';
-import type { NavigationCategory, Tutorial, WebNavigation } from '@/db/supabase/types';
+import type { AndroidApp, MacApp, NavigationCategory, Tutorial, WebNavigation, WindowsApp } from '@/db/supabase/types';
 import { locales } from '@/i18n';
 
 import { InfoPageSize } from '@/lib/constants';
@@ -36,6 +36,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   add('', { lastModified: new Date(), changeFrequency: 'daily', priority: 1 }); // Home
   add('/explore', { lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 });
   add('/tutorials', { lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 });
+  add('/android', { lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 });
+  add('/mac', { lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 });
+  add('/windows', { lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 });
   add('/submit', { lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 });
   add('/startup', { lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 });
   add('/privacy-policy', { lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 });
@@ -102,6 +105,75 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }
       }),
     );
+  }
+
+  // Android list pagination and detail pages
+  {
+    const ANDROID_PAGE_SIZE = 24; // Keep in sync with AndroidList.tsx
+    const [{ count: androidCount }, { data: androidList }] = await Promise.all([
+      supabase.from('android_app').select('name', { count: 'exact', head: true }),
+      supabase.from('android_app').select('name, created_at').order('created_at', { ascending: false }),
+    ]);
+
+    const totalAndroidPages = Math.max(1, Math.ceil((androidCount || 0) / ANDROID_PAGE_SIZE));
+    for (let p = 2; p <= totalAndroidPages; p += 1) {
+      add(`/android/page/${p}`, { lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 });
+    }
+
+    (androidList || []).forEach((item: Pick<AndroidApp, 'name' | 'created_at'>) => {
+      const namePath = encodeURIComponent(item.name);
+      add(`/android/${namePath}`, {
+        lastModified: item.created_at ? new Date(item.created_at) : new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    });
+  }
+
+  // Mac list pagination and detail pages
+  {
+    const MAC_PAGE_SIZE = 24; // Keep in sync with MacList.tsx
+    const [{ count: macCount }, { data: macList }] = await Promise.all([
+      supabase.from('mac_app').select('name', { count: 'exact', head: true }),
+      supabase.from('mac_app').select('name, created_at').order('created_at', { ascending: false }),
+    ]);
+
+    const totalMacPages = Math.max(1, Math.ceil((macCount || 0) / MAC_PAGE_SIZE));
+    for (let p = 2; p <= totalMacPages; p += 1) {
+      add(`/mac/page/${p}`, { lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 });
+    }
+
+    (macList || []).forEach((item: Pick<MacApp, 'name' | 'created_at'>) => {
+      const namePath = encodeURIComponent(item.name);
+      add(`/mac/${namePath}`, {
+        lastModified: item.created_at ? new Date(item.created_at) : new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    });
+  }
+
+  // Windows list pagination and detail pages
+  {
+    const WINDOWS_PAGE_SIZE = 24; // Keep in sync with WindowsList.tsx
+    const [{ count: winCount }, { data: windowsList }] = await Promise.all([
+      supabase.from('windows_app').select('name', { count: 'exact', head: true }),
+      supabase.from('windows_app').select('name, created_at').order('created_at', { ascending: false }),
+    ]);
+
+    const totalWinPages = Math.max(1, Math.ceil((winCount || 0) / WINDOWS_PAGE_SIZE));
+    for (let p = 2; p <= totalWinPages; p += 1) {
+      add(`/windows/page/${p}`, { lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 });
+    }
+
+    (windowsList || []).forEach((item: Pick<WindowsApp, 'name' | 'created_at'>) => {
+      const namePath = encodeURIComponent(item.name);
+      add(`/windows/${namePath}`, {
+        lastModified: item.created_at ? new Date(item.created_at) : new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    });
   }
 
   // AI detail pages

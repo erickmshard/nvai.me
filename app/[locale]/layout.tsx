@@ -24,7 +24,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning className=''>
-      <body className='relative mx-auto flex min-h-screen flex-col bg-gray-50 text-black'>
+      <body className='relative flex min-h-screen w-full flex-col overflow-x-hidden bg-gray-50 text-black'>
         <ClientIntlProvider locale={locale} messages={messages}>
           <Toaster
             position='top-center'

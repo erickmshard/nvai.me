@@ -10,6 +10,7 @@ import Faq from '@/components/Faq';
 import SearchForm from '@/components/home/SearchForm';
 import WebNavCardList from '@/components/webNav/WebNavCardList';
 
+import HomePlatformsSection from './HomePlatformsSection';
 import HomeTutorialsSection from './HomeTutorialsSection';
 import { TagList } from './Tag';
 
@@ -89,6 +90,7 @@ export default async function Page() {
           </Link>
         </div>
         <HomeTutorialsSection />
+        <HomePlatformsSection />
         <Faq />
         <ScrollToTop />
       </div>

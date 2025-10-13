@@ -8,6 +8,18 @@ export const NAV_LINKS = [
     href: '/tutorials',
   },
   {
+    code: 'android',
+    href: '/android',
+  },
+  {
+    code: 'mac',
+    href: '/mac',
+  },
+  {
+    code: 'windows',
+    href: '/windows',
+  },
+  {
     code: 'submit',
     href: '/submit',
   },
