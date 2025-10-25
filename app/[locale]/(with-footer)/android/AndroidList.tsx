@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { createClient } from '@/db/supabase/client';
 import type { AndroidApp } from '@/db/supabase/types';
 
+import SearchForm from '@/components/home/SearchForm';
 import BasePagination from '@/components/page/BasePagination';
 
 const ANDROID_PAGE_SIZE = 24;
@@ -52,6 +53,9 @@ export default async function AndroidList({ pageNum, locale }: { pageNum?: strin
       <div className='my-5 flex flex-col gap-1 text-center lg:my-10 lg:gap-3'>
         <h1 className='text-2xl lg:text-5xl'>Android Apps</h1>
         <h2 className='text-xs text-black/70 lg:text-sm'>Curated Android software you can download safely.</h2>
+      </div>
+      <div className='mb-6 flex w-full items-center justify-center lg:mb-8'>
+        <SearchForm />
       </div>
 
       {list.length === 0 ? (
