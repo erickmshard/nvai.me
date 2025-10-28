@@ -144,7 +144,58 @@ export default function Footer() {
             <img
               src='https://submitaitools.org/static_submitaitools/images/submitaitools.png'
               alt='Submit AI Tools – The ultimate platform to discover, submit, and explore the best AI tools across various categories.'
-              style={{ borderRadius: '10px', width: '200px', height: '60px' }}
+              className='h-[60px] w-auto rounded-[10px] object-contain'
+              loading='lazy'
+            />
+          </a>
+          <a href='https://similarlabs.com/?ref=embed' target='_blank' style={{ cursor: 'pointer' }}>
+            <img
+              src='https://similarlabs.com/similarlabs-embed-badge-dark.svg'
+              alt='SimilarLabs Embed Badge'
+              className='h-[60px] w-auto object-contain'
+              loading='lazy'
+            />
+          </a>
+          <a href='https://twelve.tools' target='_blank' rel='noreferrer' title='Twelve Tools'>
+            <img
+              src='https://twelve.tools/badge0-white.svg'
+              alt='Featured on Twelve Tools'
+              className='h-[60px] w-auto object-contain'
+              loading='lazy'
+            />
+          </a>
+          <a href='https://www.showmebest.ai' target='_blank' rel='noreferrer' title='ShowMeBestAI'>
+            <img
+              src='https://www.showmebest.ai/badge/feature-badge-white.webp'
+              alt='Featured on ShowMeBestAI'
+              className='h-[60px] w-auto object-contain'
+              loading='lazy'
+            />
+          </a>
+          <a href='https://navifyai.com/' target='_blank' rel='noopener'>
+            <img
+              src='https://navifyai.com/static/img/badge-dark.svg'
+              alt='Featured on NavifyAI.com - AI Tools Directory'
+              className='h-[60px] w-auto object-contain'
+              loading='lazy'
+            />
+          </a>
+          <a href='https://favtool.ai' target='_blank' title='Featured on FavTool.ai'>
+            <img
+              src='https://favtool.ai/badge/light.png'
+              alt='Featured on FavTool.ai'
+              className='h-[60px] w-auto object-contain'
+              loading='lazy'
+            />
+          </a>
+
+          {/* aiwget */}
+          <a href='https://aiwget.com' target='_blank' title='Featured on aiwget'>
+            <img
+              src='https://aiwget.com/aiwget_badge.png'
+              alt='Featured on aiwget'
+              className='h-[60px] w-auto object-contain'
+              loading='lazy'
             />
           </a>
         </div>
