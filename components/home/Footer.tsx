@@ -67,6 +67,10 @@ export default function Footer() {
       title: 'AIToolsHood',
       href: 'https://aitoolshood.com/',
     },
+    {
+      title: 'AIStage',
+      href: 'https://aistage.net',
+    },
   ];
 
   const INFO_LIST = [
