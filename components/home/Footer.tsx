@@ -139,6 +139,15 @@ export default function Footer() {
             </li>
           ))}
         </ul>
+        <div className='mt-4 flex flex-wrap items-center gap-4'>
+          <a href='https://submitaitools.org' target='_blank' rel='noreferrer' title='Submit AI Tools'>
+            <img
+              src='https://submitaitools.org/static_submitaitools/images/submitaitools.png'
+              alt='Submit AI Tools – The ultimate platform to discover, submit, and explore the best AI tools across various categories.'
+              style={{ borderRadius: '10px', width: '200px', height: '60px' }}
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );
