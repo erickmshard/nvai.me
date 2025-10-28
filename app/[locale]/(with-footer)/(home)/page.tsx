@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { createClient } from '@/db/supabase/client';
 import { CircleChevronRight } from 'lucide-react';
@@ -13,8 +12,6 @@ import WebNavCardList from '@/components/webNav/WebNavCardList';
 import HomePlatformsSection from './HomePlatformsSection';
 import HomeTutorialsSection from './HomeTutorialsSection';
 import { TagList } from './Tag';
-
-const ScrollToTop = dynamic(() => import('@/components/page/ScrollToTop'), { ssr: false });
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const t = await getTranslations({
@@ -92,7 +89,6 @@ export default async function Page() {
         <HomeTutorialsSection />
         <HomePlatformsSection />
         <Faq />
-        <ScrollToTop />
       </div>
     </div>
   );

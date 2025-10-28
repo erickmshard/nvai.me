@@ -18,7 +18,7 @@ export default function Faq() {
   return (
     <div className='mx-auto mt-10 max-w-pc space-y-8 pb-5 lg:mt-16'>
       <h2 className='text-center text-2xl font-bold text-black lg:pb-3 lg:text-3xl'>{t('title')}</h2>
-      <div className='grid grid-cols-1 gap-4 px-3 md:grid-cols-2 lg:gap-6 lg:px-0 xl:grid-cols-3'>
+      <div className='flex flex-col gap-4 px-3 lg:gap-6 lg:px-0'>
         <div className='rounded-xl border border-gray-200 bg-gradient-to-b from-white to-gray-50 p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md'>
           <TitleItem>{t('1.question')}</TitleItem>
           <ContentItem>{t('1.answer')}</ContentItem>

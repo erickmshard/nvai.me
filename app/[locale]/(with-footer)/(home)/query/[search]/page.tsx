@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { createClient } from '@/db/supabase/client';
 import type { NavigationCategory } from '@/db/supabase/types';
@@ -15,8 +14,6 @@ import WebNavCardList from '@/components/webNav/WebNavCardList';
 
 import { TagList } from '../../Tag';
 import Loading from './loading';
-
-const ScrollToTop = dynamic(() => import('@/components/page/ScrollToTop'), { ssr: false });
 
 export async function generateMetadata({
   params: { locale, search },
@@ -260,7 +257,6 @@ export default async function Page({ params }: { params: { search?: string } }) 
       </section>
       <Separator className='mx-auto my-10 h-px w-4/5 bg-[#2C2D36] lg:my-16' />
       <Faq />
-      <ScrollToTop />
     </Suspense>
   );
 }

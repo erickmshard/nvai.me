@@ -63,6 +63,10 @@ export default function Footer() {
       title: 'Woy AI Tools',
       href: 'https://woy.ai/',
     },
+    {
+      title: 'AIToolsHood',
+      href: 'https://aitoolshood.com/',
+    },
   ];
 
   const INFO_LIST = [
