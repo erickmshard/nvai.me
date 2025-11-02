@@ -130,3 +130,21 @@
 .prose strong {
   color: hsl(var(--foreground));
 }
+
+/* Normalize horizontal rules in markdown to a thin light line */
+.prose hr {
+  @apply my-6 h-px w-full border-0 bg-gray-200;
+}
+
+/* Guard against stray empty nodes in scraped markdown */
+.prose a:empty,
+.prose p:empty,
+.prose pre:empty,
+.prose h1:empty,
+.prose h2:empty,
+.prose h3:empty,
+.prose h4:empty,
+.prose h5:empty,
+.prose h6:empty {
+  display: none;
+}

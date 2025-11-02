@@ -1,13 +1,15 @@
+import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { createClient } from '@/db/supabase/client';
+import { createPublicClient } from '@/db/supabase/publicClient';
 import dayjs from 'dayjs';
 
 import BaseImage from '@/components/image/BaseImage';
 import MarkdownProse from '@/components/MarkdownProse';
+import LatestAppsGrid from '@/components/sections/LatestAppsGrid';
 
 export async function generateMetadata({ params: { name } }: { params: { name: string } }): Promise<Metadata> {
-  const supabase = createClient();
+  const supabase = createPublicClient(1800);
   const { data } = await supabase.from('windows_app').select('title,content,icon_url').eq('name', name).maybeSingle();
   if (!data) return {};
   const baseTitle = `${data.title} Download for Windows (Latest) | Nav ai`;
@@ -36,7 +38,7 @@ export async function generateMetadata({ params: { name } }: { params: { name: s
 }
 
 export default async function Page({ params: { name } }: { params: { name: string } }) {
-  const supabase = createClient();
+  const supabase = createPublicClient(1800);
   const { data } = await supabase.from('windows_app').select('*').eq('name', name).maybeSingle();
   if (!data) {
     notFound();
@@ -136,6 +138,10 @@ export default async function Page({ params: { name } }: { params: { name: strin
           </aside>
         </div>
       </div>
+      {/* Latest in Windows */}
+      <Suspense>
+        <LatestAppsGrid platform='windows' excludeName={data.name} moreHref='/windows' title='Latest Windows Apps' />
+      </Suspense>
     </div>
   );
 }

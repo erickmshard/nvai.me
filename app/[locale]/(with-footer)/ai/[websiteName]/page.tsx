@@ -1,19 +1,21 @@
+import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { createClient } from '@/db/supabase/client';
+import { createPublicClient } from '@/db/supabase/publicClient';
 import { CircleArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 import { Separator } from '@/components/ui/separator';
 import BaseImage from '@/components/image/BaseImage';
 import MarkdownProse from '@/components/MarkdownProse';
+import LatestWebNavGrid from '@/components/sections/LatestWebNavGrid';
 
 export async function generateMetadata({
   params: { locale, websiteName },
 }: {
   params: { locale: string; websiteName: string };
 }): Promise<Metadata> {
-  const supabase = createClient();
+  const supabase = createPublicClient(1800);
   const t = await getTranslations({
     locale,
     namespace: 'Metadata.ai',
@@ -49,7 +51,7 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params: { websiteName } }: { params: { websiteName: string } }) {
-  const supabase = createClient();
+  const supabase = createPublicClient(1800);
   const t = await getTranslations('Startup.detail');
   const { data: dataList } = await supabase.from('web_navigation').select().eq('name', websiteName);
   if (!dataList) {
@@ -96,7 +98,7 @@ export default async function Page({ params: { websiteName } }: { params: { webs
             href={data.url}
             target='_blank'
             rel='noreferrer'
-            className={`flex-center mt-5 min-h-5 w-full gap-1 rounded-[8px] bg-gradient-to-r ${ctaAccent} p-[10px] text-sm capitalize text-white shadow-lg transition duration-300 ease-in-out hover:-translate-y-0.5 hover:opacity-95 lg:mt-2 lg:w-[288px]`}
+            className={`flex-center mt-5 min-h-5 w-[288px] gap-1 rounded-[8px] bg-gradient-to-r ${ctaAccent} mx-auto p-[10px] text-sm capitalize text-white shadow-lg transition duration-300 ease-in-out hover:-translate-y-0.5 hover:opacity-95 lg:mx-0 lg:mt-2`}
           >
             {t('visitWebsite')} <CircleArrowRight className='size-[14px]' />
           </a>
@@ -120,10 +122,14 @@ export default async function Page({ params: { websiteName } }: { params: { webs
         </a>
       </div>
       <Separator className='bg-gray-200' />
-      <div className='mx-auto mb-5 w-full max-w-pc px-3 lg:px-0'>
+      <div className='relative z-10 mx-auto mb-5 w-full max-w-pc px-3 lg:px-0'>
         <h2 className='my-5 text-2xl text-black lg:my-10'>{t('introduction')}</h2>
         <MarkdownProse markdown={data?.detail || ''} className='prose-lg' />
       </div>
+      {/* Latest AI tools */}
+      <Suspense>
+        <LatestWebNavGrid excludeName={data.name} moreHref='/explore' title='Latest AI Tools' />
+      </Suspense>
     </div>
   );
 }

@@ -1,15 +1,17 @@
+import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { createClient } from '@/db/supabase/client';
+import { createPublicClient } from '@/db/supabase/publicClient';
 
 import { Separator } from '@/components/ui/separator';
 import MarkdownProse from '@/components/MarkdownProse';
+import LatestTutorialsGrid from '@/components/sections/LatestTutorialsGrid';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata({ params: { slug } }: { params: { slug: string } }): Promise<Metadata> {
-  const supabase = createClient();
+  const supabase = createPublicClient(900);
   const { data } = await supabase.from('tutorials').select('*').eq('slug', slug).maybeSingle();
   if (!data) notFound();
   const desc = data.summary || (data.content_md || '').slice(0, 160);
@@ -35,7 +37,7 @@ export async function generateMetadata({ params: { slug } }: { params: { slug: s
 }
 
 export default async function TutorialDetailPage({ params }: { params: { slug: string } }) {
-  const supabase = createClient();
+  const supabase = createPublicClient(900);
   const { data, error } = await supabase.from('tutorials').select('*').eq('slug', params.slug).single();
 
   if (error || !data) return notFound();
@@ -66,6 +68,10 @@ export default async function TutorialDetailPage({ params }: { params: { slug: s
       <div className='mx-auto mb-5 w-full max-w-pc px-3 lg:px-0'>
         <MarkdownProse markdown={data?.content_md || ''} className='prose-lg' />
       </div>
+      {/* Latest tutorials */}
+      <Suspense>
+        <LatestTutorialsGrid excludeSlug={data.slug} moreHref='/tutorials' title='Latest Tutorials' />
+      </Suspense>
     </div>
   );
 }
