@@ -26,7 +26,7 @@ export default function SubmitForm({ className }: { className?: string }) {
           <p className='mt-3 text-[14px] leading-7 text-[#2C2D36]/90'>
             Due to a heavy workload, the directory currently only accepts reciprocal listings for websites that have
             been online for at least one year. “New websites” refers to sites less than one year old; listing them
-            requires a $3.99 fee.
+            requires a $9.9 fee.
           </p>
 
           <div className='mt-5 flex flex-wrap items-center gap-3'>
