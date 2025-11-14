@@ -67,7 +67,7 @@ env环境变量CRAWLER_API**中
 
 ### 在Vercel上部署 **（别忘了设置环境变量）**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F6677-ai%2Ftap4-ai-webui.git&env=NEXT_PUBLIC_SITE_URL,GOOGLE_TRACKING_ID,GOOGLE_ADSENSE_URL,CONTACT_US_EMAIL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,CRAWLER_API,CRAWLER_API_KEY,CRON_AUTH_KEY,SUBMIT_AUTH_KEY&project-name=tap4-ai)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F6677-ai%2Ftap4-ai-webui.git&env=NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_GOOGLE_TRACKING_ID,NEXT_PUBLIC_GOOGLE_ADSENSE_URL,NEXT_PUBLIC_CONTACT_US_EMAIL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,CRAWLER_API,CRAWLER_API_KEY,CRON_AUTH_KEY,SUBMIT_AUTH_KEY&project-name=tap4-ai)
 
 环境变量参考如下: **注：环境变量key必须添加，必须正确的key包括
 NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY，其他可填写随意字符串**
@@ -76,11 +76,12 @@ NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY，�
 # Your domain
 NEXT_PUBLIC_SITE_URL="https://tap4.ai"
 
-# Google tracking ID and ad URL
-GOOGLE_TRACKING_ID="G-XXXXXXX" GOOGLE_ADSENSE_URL="https://xxxx.googlesyndication.com/xxxxx/xxxxx"
+# Google 统计 ID 和广告 URL（前端需要使用 NEXT_PUBLIC_ 前缀）
+NEXT_PUBLIC_GOOGLE_TRACKING_ID="G-XXXXXXX"
+NEXT_PUBLIC_GOOGLE_ADSENSE_URL="https://xxxx.googlesyndication.com/xxxxx/xxxxx"
 
-# Contact email at the bottom
-CONTACT_US_EMAIL="contact@tap4.ai"
+# 页面底部的联系邮箱（前端可见）
+NEXT_PUBLIC_CONTACT_US_EMAIL="contact@tap4.ai"
 
 # Supabase database URL and key
 NEXT_PUBLIC_SUPABASE_URL="https://xxxyyyzzz.supabase.co" NEXT_PUBLIC_SUPABASE_ANON_KEY="XXX.YYY.ZZZ"
@@ -138,13 +139,12 @@ NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY，�
 # Your domain
 NEXT_PUBLIC_SITE_URL="https://tap4.ai"
 
-# Google tracking ID and ad URL
-GOOGLE_TRACKING_ID="G-XXXXXXX"
+# Google 统计 ID 和广告 URL（前端需要使用 NEXT_PUBLIC_ 前缀）
+NEXT_PUBLIC_GOOGLE_TRACKING_ID="G-XXXXXXX"
+NEXT_PUBLIC_GOOGLE_ADSENSE_URL="https://xxxx.googlesyndication.com/xxxxx/xxxxx"
 
-GOOGLE_ADSENSE_URL="https://xxxx.googlesyndication.com/xxxxx/xxxxx"
-
-# Contact email at the bottom
-CONTACT_US_EMAIL="contact@tap4.ai"
+# 页面底部的联系邮箱（前端可见）
+NEXT_PUBLIC_CONTACT_US_EMAIL="contact@tap4.ai"
 
 # Supabase database URL and key
 NEXT_PUBLIC_SUPABASE_URL="https://xxxyyyzzz.supabase.co"

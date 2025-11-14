@@ -73,7 +73,7 @@ https://{crawler_domain}/site/crawl, where {crawler_domain} is your specific dom
 
 ### Deploy on Vercel **(Don't forget to set the environment variables)**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F6677-ai%2Ftap4-ai-webui.git&env=NEXT_PUBLIC_SITE_URL,GOOGLE_TRACKING_ID,GOOGLE_ADSENSE_URL,CONTACT_US_EMAIL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,CRAWLER_API,CRAWLER_API_KEY,CRON_AUTH_KEY,SUBMIT_AUTH_KEY&project-name=tap4-ai)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F6677-ai%2Ftap4-ai-webui.git&env=NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_GOOGLE_TRACKING_ID,NEXT_PUBLIC_GOOGLE_ADSENSE_URL,NEXT_PUBLIC_CONTACT_US_EMAIL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY,CRAWLER_API,CRAWLER_API_KEY,CRON_AUTH_KEY,SUBMIT_AUTH_KEY&project-name=tap4-ai)
 
 Environment params as below: **Note: All key is in need, and the value including
 NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY write with the correct value**
@@ -82,11 +82,12 @@ NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY writ
 # Your domain
 NEXT_PUBLIC_SITE_URL="https://tap4.ai"
 
-# Google tracking ID and ad URL
-GOOGLE_TRACKING_ID="G-XXXXXXX" GOOGLE_ADSENSE_URL="https://xxxx.googlesyndication.com/xxxxx/xxxxx"
+# Google tracking ID and ad URL (use NEXT_PUBLIC_ so they work in the browser)
+NEXT_PUBLIC_GOOGLE_TRACKING_ID="G-XXXXXXX"
+NEXT_PUBLIC_GOOGLE_ADSENSE_URL="https://xxxx.googlesyndication.com/xxxxx/xxxxx"
 
-# Contact email at the bottom
-CONTACT_US_EMAIL="contact@tap4.ai"
+# Contact email at the bottom (public)
+NEXT_PUBLIC_CONTACT_US_EMAIL="contact@tap4.ai"
 
 # Supabase database URL and key
 NEXT_PUBLIC_SUPABASE_URL="https://xxxyyyzzz.supabase.co"
@@ -147,11 +148,12 @@ NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY writ
 # Your domain
 NEXT_PUBLIC_SITE_URL="https://tap4.ai"
 
-# Google tracking ID and ad URL
-GOOGLE_TRACKING_ID="G-XXXXXXX" GOOGLE_ADSENSE_URL="https://xxxx.googlesyndication.com/xxxxx/xxxxx"
+# Google tracking ID and ad URL (use NEXT_PUBLIC_ so they work in the browser)
+NEXT_PUBLIC_GOOGLE_TRACKING_ID="G-XXXXXXX"
+NEXT_PUBLIC_GOOGLE_ADSENSE_URL="https://xxxx.googlesyndication.com/xxxxx/xxxxx"
 
-# Contact email at the bottom
-CONTACT_US_EMAIL="contact@tap4.ai"
+# Contact email at the bottom (public)
+NEXT_PUBLIC_CONTACT_US_EMAIL="contact@tap4.ai"
 
 # Supabase database URL and key
 NEXT_PUBLIC_SUPABASE_URL="https://xxxyyyzzz.supabase.co" NEXT_PUBLIC_SUPABASE_ANON_KEY="XXX.YYY.ZZZ"

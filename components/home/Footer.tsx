@@ -111,14 +111,16 @@ export default function Footer() {
             {INFO_LIST.map((item) => (
               <InfoLink key={item.href} href={item.href} title={item.title} />
             ))}
-            <a
-              href={`mailto:${CONTACT_US_EMAIL}`}
-              className='whitespace-nowrap text-xs text-white hover:opacity-70 lg:text-sm'
-              title={t('contactUs')}
-              type='email'
-            >
-              {t('contactUs')}
-            </a>
+            {CONTACT_US_EMAIL && (
+              <a
+                href={`mailto:${CONTACT_US_EMAIL}`}
+                className='whitespace-nowrap text-xs text-white hover:opacity-70 lg:text-sm'
+                title={t('contactUs')}
+                type='email'
+              >
+                {t('contactUs')}
+              </a>
+            )}
           </div>
         </div>
       </div>
