@@ -96,12 +96,17 @@ export default async function Page({ params: { name } }: { params: { name: strin
               rel='noreferrer noopener nofollow'
               className='inline-flex min-h-5 items-center gap-1 rounded-[8px] bg-gradient-to-r from-indigo-500 to-blue-600 px-4 py-2 text-sm capitalize text-white shadow-lg transition duration-300 ease-in-out hover:-translate-y-0.5 hover:opacity-95'
             >
-              Download
+              Open external download page
             </a>
           </div>
           {data.content ? (
             <p className='mt-3 max-w-[880px] text-sm leading-relaxed text-black/70 lg:text-base'>{data.content}</p>
           ) : null}
+          <p className='mt-2 max-w-[880px] text-[11px] leading-relaxed text-black/50 lg:text-xs'>
+            Nav ai only provides external links to this software&apos;s official or trusted download pages on
+            third-party sites. We do not host or distribute any installation files, and all rights to the software and
+            trademarks belong to their respective owners.
+          </p>
         </div>
 
         {/* Content + Sidebar */}
@@ -132,7 +137,7 @@ export default async function Page({ params: { name } }: { params: { name: strin
                 rel='noreferrer noopener nofollow'
                 className='mt-3 inline-flex min-h-5 items-center gap-1 rounded-[8px] border border-gray-300 bg-white px-3 py-1 text-xs text-black/80 transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-sm'
               >
-                Download
+                Open external download page
               </a>
             </div>
           </aside>

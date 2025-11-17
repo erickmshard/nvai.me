@@ -11,7 +11,7 @@ export default function Page({ params: { locale } }: { params: { locale: string 
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = 'Android Apps – Free Latest Downloads | Nav ai';
+  const title = 'Android Apps - Free Latest Downloads | Nav ai';
   const description =
     'Discover curated Android apps with safe, direct downloads. Get the latest versions free on Nav ai.';
 
