@@ -67,8 +67,8 @@ export default function Navigation() {
           </div>
         </nav>
       </header>
-      <div className='w-full bg-[#23242C]'>
-        <p className='mx-auto max-w-pc px-5 py-1 text-center text-[11px] text-white/60 lg:px-0 lg:text-xs'>
+      <div className='w-full bg-[#7A1F1F]'>
+        <p className='mx-auto max-w-pc px-5 py-1 text-center text-[11px] text-white lg:px-0 lg:text-xs'>
           Nav ai is a third-party navigation site and only links to external software publishers and app stores. We do
           not host or distribute any software installation files.
         </p>
