@@ -17,40 +17,47 @@ export default async function ExploreList({ pageNum }: { pageNum?: string }) {
   const start = (currentPage - 1) * WEB_PAGE_SIZE;
   const end = start + WEB_PAGE_SIZE - 1;
 
-  const [{ data: categoryList }, { data: navigationList, count }] = await Promise.all([
-    supabase.from('navigation_category').select(),
-    supabase
-      .from('web_navigation')
-      .select('*', { count: 'exact' })
-      .order('collection_time', { ascending: false })
-      .range(start, end),
-  ]);
+  const [{ data: categoryList, error: categoryError }, { data: navigationList, error: navigationError, count }] =
+    await Promise.all([
+      supabase.from('navigation_category').select(),
+      supabase
+        .from('web_navigation')
+        .select('*', { count: 'exact' })
+        .order('collection_time', { ascending: false })
+        .range(start, end),
+    ]);
+
+  if (categoryError) {
+    console.error('Failed to load navigation categories', categoryError);
+  }
+  if (navigationError) {
+    console.error('Failed to load web navigation list', navigationError);
+  }
+
+  const tagListData = (categoryList ?? []).map((item: NavigationCategory) => ({
+    id: String(item.id),
+    name: item.name,
+    href: `/category/${item.name}`,
+  }));
+
+  const navigationListData = navigationList ?? [];
+  const totalCount = count ?? 0;
 
   return (
     <div className='grid grid-cols-1 items-start gap-5 lg:grid-cols-[260px_1fr]'>
       <aside className='sticky top-20 hidden h-fit lg:block'>
         <h3 className='mb-3 text-sm font-semibold text-black/80'>Categories</h3>
-        <TagList
-          colorful
-          showIcons
-          direction='column'
-          maxHeight='auto'
-          data={categoryList!.map((item: NavigationCategory) => ({
-            id: String(item.id),
-            name: item.name,
-            href: `/category/${item.name}`,
-          }))}
-        />
+        <TagList colorful showIcons direction='column' maxHeight='auto' data={tagListData} />
       </aside>
       <section className='space-y-4'>
         <div className='flex w-full items-center justify-end'>
           <SearchForm />
         </div>
-        <WebNavRowList dataList={navigationList!} />
+        <WebNavRowList dataList={navigationListData} />
         <BasePagination
           currentPage={currentPage}
           pageSize={WEB_PAGE_SIZE}
-          total={count!}
+          total={totalCount}
           route='/explore'
           subRoute='/page'
           className='my-5 lg:my-10'

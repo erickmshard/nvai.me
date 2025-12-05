@@ -47,25 +47,37 @@ export default async function Page({ params }: { params: { code: string; pageNum
   const supabase = createClient();
   const currentPage = Number(params?.pageNum || 1);
 
-  const [{ data: categoryList }, { data: navigationList, count }] = await Promise.all([
-    supabase.from('navigation_category').select().eq('name', params.code),
-    supabase
-      .from('web_navigation')
-      .select('*', { count: 'exact' })
-      .eq('category_name', params.code)
-      .range(0, InfoPageSize - 1),
-  ]);
+  const [{ data: categoryList, error: categoryError }, { data: navigationList, error: navigationError, count }] =
+    await Promise.all([
+      supabase.from('navigation_category').select().eq('name', params.code),
+      supabase
+        .from('web_navigation')
+        .select('*', { count: 'exact' })
+        .eq('category_name', params.code)
+        .range(0, InfoPageSize - 1),
+    ]);
 
+  if (categoryError) {
+    console.error('Failed to load navigation category detail', categoryError);
+  }
   if (!categoryList || !categoryList[0]) {
     notFound();
   }
 
+  if (navigationError) {
+    console.error('Failed to load navigation list for category page', navigationError);
+  }
+
+  const headerTitle = categoryList[0].title || params.code;
+  const navigationListData = navigationList ?? [];
+  const totalCount = count ?? 0;
+
   return (
     <Content
-      headerTitle={categoryList[0]!.title || params.code}
-      navigationList={navigationList!}
+      headerTitle={headerTitle}
+      navigationList={navigationListData}
       currentPage={currentPage}
-      total={count!}
+      total={totalCount}
       pageSize={InfoPageSize}
       route={`/category/${params.code}`}
     />

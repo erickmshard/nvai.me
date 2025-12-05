@@ -83,19 +83,18 @@ export default async function Page({ params }: { params: { search?: string } }) 
     .or(`title.ilike.%${keyword}%,content.ilike.%${keyword}%`)
     .limit(12);
 
+  const categoryTags = (categoryList ?? []).map((item: NavigationCategory) => ({
+    id: String(item.id),
+    name: item.name,
+    href: `/category/${item.name}`,
+  }));
+  const androidItems = androidList ?? [];
+  const macItems = macList ?? [];
+  const windowsItems = windowsList ?? [];
+
   return (
     <Suspense fallback={<Loading />}>
-      <div className='mb-10 mt-5'>
-        {params?.search && (
-          <TagList
-            data={categoryList!.map((item: NavigationCategory) => ({
-              id: String(item.id),
-              name: item.name,
-              href: `/category/${item.name}`,
-            }))}
-          />
-        )}
-      </div>
+      <div className='mb-10 mt-5'>{params?.search ? <TagList data={categoryTags} /> : null}</div>
       <section className='flex flex-col gap-6'>
         {params?.search ? (
           <>
@@ -118,7 +117,7 @@ export default async function Page({ params }: { params: { search?: string } }) 
               </div>
             ) : null}
 
-            {androidList && androidList.length > 0 ? (
+            {androidItems.length > 0 ? (
               <div>
                 <div className='mb-2 flex items-center justify-between'>
                   <h3 className='text-left text-[16px] font-semibold lg:text-xl'>Android</h3>
@@ -127,7 +126,7 @@ export default async function Page({ params }: { params: { search?: string } }) 
                   </Link>
                 </div>
                 <div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3'>
-                  {androidList!.map((item: any) => (
+                  {androidItems.map((item: any) => (
                     <Link
                       key={item.name}
                       href={`/android/${encodeURIComponent(item.name)}`}
@@ -159,7 +158,7 @@ export default async function Page({ params }: { params: { search?: string } }) 
               </div>
             ) : null}
 
-            {macList && macList.length > 0 ? (
+            {macItems.length > 0 ? (
               <div>
                 <div className='mb-2 flex items-center justify-between'>
                   <h3 className='text-left text-[16px] font-semibold lg:text-xl'>Mac</h3>
@@ -168,7 +167,7 @@ export default async function Page({ params }: { params: { search?: string } }) 
                   </Link>
                 </div>
                 <div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3'>
-                  {macList!.map((item: any) => (
+                  {macItems.map((item: any) => (
                     <Link
                       key={item.name}
                       href={`/mac/${encodeURIComponent(item.name)}`}
@@ -200,7 +199,7 @@ export default async function Page({ params }: { params: { search?: string } }) 
               </div>
             ) : null}
 
-            {windowsList && windowsList.length > 0 ? (
+            {windowsItems.length > 0 ? (
               <div>
                 <div className='mb-2 flex items-center justify-between'>
                   <h3 className='text-left text-[16px] font-semibold lg:text-xl'>Windows</h3>
@@ -209,7 +208,7 @@ export default async function Page({ params }: { params: { search?: string } }) 
                   </Link>
                 </div>
                 <div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3'>
-                  {windowsList!.map((item: any) => (
+                  {windowsItems.map((item: any) => (
                     <Link
                       key={item.name}
                       href={`/windows/${encodeURIComponent(item.name)}`}
@@ -244,9 +243,9 @@ export default async function Page({ params }: { params: { search?: string } }) 
             {!(
               (dataList && dataList.length) ||
               (tutorialList && tutorialList.length) ||
-              (androidList && androidList.length) ||
-              (macList && macList.length) ||
-              (windowsList && windowsList.length)
+              androidItems.length ||
+              macItems.length ||
+              windowsItems.length
             ) ? (
               <Empty title={t('empty')} />
             ) : null}
