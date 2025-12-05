@@ -48,10 +48,24 @@ export const revalidate = RevalidateOneHour;
 export default async function Page() {
   const supabase = createClient();
   const t = await getTranslations('Home');
-  const [{ data: categoryList }, { data: navigationList }] = await Promise.all([
-    supabase.from('navigation_category').select(),
-    supabase.from('web_navigation').select().order('collection_time', { ascending: false }).limit(12),
-  ]);
+  const [{ data: categoryList, error: categoryError }, { data: navigationList, error: navigationError }] =
+    await Promise.all([
+      supabase.from('navigation_category').select(),
+      supabase.from('web_navigation').select().order('collection_time', { ascending: false }).limit(12),
+    ]);
+
+  if (categoryError) {
+    console.error('Failed to load navigation categories', categoryError);
+  }
+  if (navigationError) {
+    console.error('Failed to load navigation list', navigationError);
+  }
+
+  const tagListData = (categoryList ?? []).map((item: { id: number | string; name: string }) => ({
+    id: String(item.id),
+    name: item.name,
+    href: `/category/${item.name}`,
+  }));
 
   return (
     <div className='relative w-full bg-gray-50'>
@@ -64,20 +78,11 @@ export default async function Page() {
           <SearchForm />
         </div>
         <div className='mb-10 mt-5'>
-          <TagList
-            colorful
-            showIcons
-            maxHeight={144}
-            data={categoryList!.map((item: { id: number | string; name: string }) => ({
-              id: String(item.id),
-              name: item.name,
-              href: `/category/${item.name}`,
-            }))}
-          />
+          <TagList colorful showIcons maxHeight={144} data={tagListData} />
         </div>
         <div className='flex flex-col gap-5'>
           <h2 className='text-center text-[18px] text-black lg:text-[32px]'>{t('ai-navigate')}</h2>
-          <WebNavCardList dataList={navigationList!} />
+          <WebNavCardList dataList={navigationList ?? []} />
           <Link
             href='/explore'
             className='mx-auto mb-5 flex w-fit items-center justify-center gap-5 rounded-[9px] border border-black p-[10px] text-sm leading-4 text-black hover:opacity-70'
